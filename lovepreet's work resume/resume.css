@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#template h1{
+    padding-left: 50px;
+    font-family: "Euclid Circular B",sans-serif;
+    font-size: 50px;
+}
+#land{
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 280px;
+    border: 2px solid gray;
+     border-radius: 10px;
+     margin-top: 50px;
+     display: flex;
+     
+}
+#land{
+    position: relative;
+    /* filter: blur(5px); */
+     box-shadow: -15px 17px 17px;
+}
+
+#nh-left{
+    
+    width: 50%;
+    margin-top: 30px;
+    padding-left: 30px;
+    opacity: 1;
+    /* position: relative; */
+    /* filter: none; */
+    
+}
+.blur {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: .5;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(25px);
+  z-index: 0;
+}
+
+/* .nh-left {
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Changed from rgba to transparent */
+  /*border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  z-index: 10;
+  color: #000; 
+} */
+#nh-left{
+    
+  width: 50%;
+  margin-top: 30px;
+  padding-left: 30px;
+  opacity: 1;}
+  #button{
+align-self: flex-end;
+position: relative;
+bottom: 15px;
+/* right: 10px; */
+width: 300px;
+border: 2px solid grey;
+border-radius: 50px;
+background-color: #51E2C2;
+
+
+}
+#button a{
+  text-decoration: none;
+  color: black;
+
+}
+
+#pic img{
+    height: 260px;
+    width: 500px;
+   
+}
+#pic{
+    align-self: center;
+    position: relative;
+}
+.two{
+    background: #51E2C2;
+    
+}
+.two {
+    background: #51E2C2; /* Existing background color */
+    background-image: linear-gradient(120deg, #51E2C2 20%, #fff 20%, #fff 80%, #51E2C2 80%);
+    background-size: 100% 50px;
+    background-position: 0% 100%;
+    /* animation: wave 5s linear infinite; */
+    
+  }
+#button:hover{
+    position: relative;
+    box-shadow: -15px 17px 17px;
+    transform: scale(1.5,1.5);
+}
+.card{
+    transition: .3s;
+}
+.card:hover{
+    position: relative;
+    left: 2px;
+    box-shadow: -15px 17px 17px;
+    
+}
+/* .col-sm-4 i{
+    position: relative;
+    top: 30%;
+    left: 45%;
+    z-index: 10;
+    font-size: 100px;
+    
+} */
+ .three{
+    font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+ }
+ #boxx{
+    width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:  rgba(156, 199, 190,.5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+ }
+ #boxx h1{
+    text-align: center;
+  margin-top: 0;
+  color: #333;
+ }
+#boxx p{
+    text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+#boxx .features{
+    display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+#boxx .feature{
+    width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 24px;
+}
+#box .feature i{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+#boxx button{
+    display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#boxx .feature {
+    transition: all 0.3s ease; /* Apply transition to all properties */
+  }
+  
+#boxx  .feature:hover {
+    transform: scale(1.1); /* Make it slightly bigger */
+    background-color: #e0e0e0; /* Change background color */
+  }
+  
