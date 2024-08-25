@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f8f9fa;
+	background: linear-gradient(
+		90deg,
+		rgba(255, 240, 224, 0.9) 0%,
+		rgba(211, 223, 255, 0.9) 100%,
+		rgba(204, 230, 255, 0.299) 50%
+	);
+}
+
+.container {
+	padding: 20px;
+}
+
+.main-heading {
+	text-align: center;
+	color: #000000;
+	margin-bottom: 20px;
+	font-size: 3.5rem;
+	font-weight: 900;
+}
+
+.content-wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.form-section {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.section {
+	background-color: #ffffff;
+	padding: 20px;
+	border: 1px solid #dee2e6;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h4 {
+	margin-bottom: 10px;
+	font-size: 2.8rem;
+	font-weight: 600;
+	color: #007bff;
+}
+
+.form-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin-bottom: 10px;
+}
+
+.form-group {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+/* Focus styling */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+	border-color: #007bff; /* Blue border color */
+	outline: none; /* Remove default outline */
+	box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Optional shadow */
+}
+
+.phone-number {
+	display: flex;
+	align-items: center;
+}
+
+.phone-code {
+	width: 25%;
+	max-width: 80px; /* Adjust this value as needed for dropdown width */
+	margin-right: 10px;
+}
+
+.phone-input {
+	width: 75%;
+	flex: 1;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+	padding: 8px;
+	border-radius: 4px;
+	border: 1px solid #ced4da;
+	font-size: 14px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+textarea {
+	resize: vertical;
+	height: 60px;
+}
+
+#uploadedImage {
+	max-width: 150px;
+	max-height: 150px;
+	margin-top: 10px;
+}
+
+.add-more {
+	background-color: #007bff;
+	color: white;
+	padding: 8px 12px;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	align-self: flex-start;
+}
+
+.add-more:hover {
+	background-color: #0056b3;
+}
+
+.hint-button {
+	background-color: #ffc107;
+	font-size: 18px;
+	font-weight: 500;
+	color: black;
+	border: none;
+	border-radius: 30%;
+	padding: 5px 10px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.next-button {
+	align-self: center;
+	background-color: #007bff;
+	color: white;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.next-button:hover {
+	background-color: #0056b3;
+}
+
+/* Image Section Styles */
+.image-section {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	background-color: #ffffff;
+	padding: 20px;
+	height: 100%;
+	border: 1px solid #dee2e6;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.image-section:hover {
+	box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+#resumeImage {
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+.preview-button,
+.download-button {
+	background-color: #007bff;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.preview-button:hover,
+.download-button:hover {
+	background-color: #0056b3;
+}
+
+/* Default Styles (Already present) */
+
+/* ... existing CSS ... */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.main-heading {
+		font-size: 2rem;
+	}
+	.content-wrapper {
+		flex-direction: column;
+	}
+
+	.form-section,
+	.image-section {
+		flex: none;
+		width: 100%;
+	}
+	.section h4 {
+		font-size: 1.7rem;
+	}
+	.image-section {
+		order: 2; /* Ensure the image section appears after the form section */
+		margin-top: 20px; /* Add some spacing if needed */
+	}
+
+	.form-section {
+		order: 1;
+	}
+
+	/* Adjust form rows and groups for better stacking */
+	.form-row {
+		flex-direction: column;
+	}
+
+	.form-group {
+		width: 100%;
+	}
+
+	/* Optional: Adjust image size for smaller screens */
+	#resumeImage {
+		max-width: 100%;
+		height: auto;
+	}
+}
