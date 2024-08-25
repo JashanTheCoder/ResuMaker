@@ -187,15 +187,18 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	max-width: 350px;
+	/* max-width: 350px; */
 	margin: 0 20px;
-	animation: slideIn 3s ease-out forwards;
+	/* animation: slideIn 3s ease-out forwards; */
 }
 
-.resume-image img {
+/* .resume-image img {
 	max-width: 100%;
 	margin: 10px 0;
 	object-fit: contain;
+} */
+.resume-image video {
+	width: 600px;
 }
 @keyframes slideIn {
 	0% {
@@ -209,6 +212,51 @@ main {
 }
 
 /* Responsive Design */
+/* CSS changes for iPad responsiveness */
+@media (min-width: 768px) and (max-width: 1300px) {
+	.main {
+		flex-direction: column; /* Stack children vertically on tablets */
+		align-items: center; /* Center items horizontally */
+	}
+	.site-button {
+		align-items: center;
+	}
+	.content {
+		max-width: 90%; /* Ensure content is responsive */
+		padding: 20px; /* Adjust padding for better spacing */
+		margin: 0; /* Remove extra margins */
+		text-align: center; /* Center align text */
+	}
+
+	.content h1 {
+		font-size: 2.5rem; /* Adjust font size for tablets */
+		line-height: 3rem; /* Adjust line height */
+		min-width: auto; /* Remove fixed width constraints */
+		max-width: 100%; /* Ensure heading takes full width */
+	}
+
+	.content p {
+		font-size: 1.2rem; /* Adjust paragraph font size */
+		margin-bottom: 20px; /* Adjust margin for spacing */
+	}
+
+	.site-button {
+		font-size: 1.2em; /* Adjust button font size */
+		padding: 15px 25px; /* Adjust padding */
+	}
+
+	.resume-image {
+		flex-direction: column; /* Stack video vertically within container */
+		align-items: center; /* Center video horizontally */
+		margin-top: 20px; /* Add space above the video */
+		width: 100%; /* Ensure container takes full width */
+	}
+
+	.resume-image video {
+		/* width: 80%; Adjust video width to fit within container */
+		width: 450px; /* Limit maximum width for larger screens */
+	}
+}
 @media (max-width: 768px) {
 	nav {
 		flex-direction: row;
@@ -231,6 +279,8 @@ main {
 
 	main {
 		flex-direction: column;
+		align-items: center;
+		text-align: center;
 		padding: 20px;
 		margin-top: 60px;
 	}
@@ -259,8 +309,16 @@ main {
 	}
 
 	.resume-image {
-		max-width: 350px;
+		/* flex-direction: column; */
+		flex-direction: column;
+		align-items: center;
+		max-width: 100%;
 		margin: 20px 0;
+	}
+	.resume-image video {
+		width: 80%; /* Adjust video width for better fit */
+		max-width: 600px; /* Limit maximum width */
+		/* width: 450px; */
 	}
 }
 
@@ -280,8 +338,11 @@ main {
 	}
 
 	.resume-image {
-		max-width: 100%;
+		max-width: 80%;
 		margin: 20px 0;
+	}
+	.resume-image video {
+		width: 350px;
 	}
 	.logo {
 		font-size: 1.3rem;
@@ -566,6 +627,7 @@ main {
 	.image-content {
 		padding-right: 0;
 		max-width: 80%;
+		max-height: 80%;
 	}
 }
 
@@ -607,7 +669,9 @@ main {
 	}
 
 	.image-content {
-		max-width: 75%;
+		max-width: 500px;
+		max-height: 400px;
+		margin-top: -151px;
 	}
 }
 
