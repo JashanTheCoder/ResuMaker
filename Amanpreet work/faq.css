@@ -22,6 +22,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+   
 	min-height: 100vh;
 }
 
@@ -837,7 +838,7 @@ body {
     height: 800px;
     display: flex;
     padding: 10px;
-    background: url(Images/header-cover.jpg);
+    background: url(https://d.novoresume.com/images/aboutus/medium/bg.png);
     background-size: cover;
     position: relative;
     overflow: hidden;
