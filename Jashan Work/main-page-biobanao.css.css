@@ -1024,7 +1024,7 @@ main {
 	padding: 50px 50px 60px 50px;
 	color: white;
 	text-align: left;
-	background-color: transparent; /* Remove any background */
+	background-color: transparent; 
 	box-sizing: border-box;
 }
 
