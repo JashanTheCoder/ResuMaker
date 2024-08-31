@@ -187,19 +187,63 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* max-width: 350px; */
+	max-width: 350px;
 	margin: 0 20px;
 	/* animation: slideIn 3s ease-out forwards; */
 }
 
-/* .resume-image img {
+.resume-image img {
 	max-width: 100%;
 	margin: 10px 0;
 	object-fit: contain;
-} */
-.resume-image video {
-	width: 600px;
 }
+/* *********************************************vela work ********************************************* */
+/* Ensure the video section has a height of 60vh */
+.video-section {
+	margin-top: 30px;
+	position: relative;
+	width: 100%;
+	height: 60vh; /* Adjust as needed */
+	overflow: hidden; /* Hide overflow */
+}
+
+/* Style the container for the video and button */
+.background-video {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.background-video video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Cover the entire background */
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Style and position the button */
+.background-video a {
+	position: absolute;
+	bottom: 20px; /* Space from the bottom of the video */
+	left: 50%;
+	transform: translateX(-50%); /* Center horizontally */
+}
+
+/* .site-button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+} */
+
+/* *********************************************vela work ********************************************* */
+
 @keyframes slideIn {
 	0% {
 		transform: translateX(100%);
