@@ -19,6 +19,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 nav {
@@ -255,54 +256,100 @@ main {
 	}
 }
 
-/* Responsive Design */
-/* CSS changes for iPad responsiveness */
+.hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 25px;
+}
+
+.hamburger div {
+	width: 25px;
+	height: 3px;
+	background-color: #000;
+	margin: 4px 0;
+	transition: 0.4s;
+}
+
+#menu-toggle {
+	display: none;
+}
+
+#menu-toggle:checked + .hamburger + .navbar-links {
+	display: none;
+}
+
+#menu-toggle:checked + .hamburger + .navbar-links + .mobile-menu {
+	display: flex;
+}
+
+.mobile-menu {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	background: #eae1e1;
+	padding: 10px;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.mobile-menu a {
+	padding: 10px;
+	text-decoration: none;
+	font-weight: 600;
+	color: black;
+}
+
 @media (min-width: 768px) and (max-width: 1300px) {
 	.main {
-		flex-direction: column; /* Stack children vertically on tablets */
-		align-items: center; /* Center items horizontally */
+		flex-direction: column;
+		align-items: center;
 	}
 	.site-button {
 		align-items: center;
 	}
 	.content {
-		max-width: 90%; /* Ensure content is responsive */
-		padding: 20px; /* Adjust padding for better spacing */
-		margin: 0; /* Remove extra margins */
-		text-align: center; /* Center align text */
+		max-width: 90%;
+		padding: 20px;
+		margin: 0;
+		text-align: center;
 	}
 
 	.content h1 {
-		font-size: 2.5rem; /* Adjust font size for tablets */
-		line-height: 3rem; /* Adjust line height */
-		min-width: auto; /* Remove fixed width constraints */
-		max-width: 100%; /* Ensure heading takes full width */
+		font-size: 2.5rem;
+		line-height: 3rem;
+		min-width: auto;
+		max-width: 100%;
 	}
 
 	.content p {
-		font-size: 1.2rem; /* Adjust paragraph font size */
-		margin-bottom: 20px; /* Adjust margin for spacing */
+		font-size: 1.2rem;
+		margin-bottom: 20px;
 	}
 
 	.site-button {
-		font-size: 1.2em; /* Adjust button font size */
-		padding: 15px 25px; /* Adjust padding */
+		font-size: 1.2em;
+		padding: 15px 25px;
 	}
 
 	.resume-image {
-		flex-direction: column; /* Stack video vertically within container */
-		align-items: center; /* Center video horizontally */
-		margin-top: 20px; /* Add space above the video */
-		width: 100%; /* Ensure container takes full width */
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
+		width: 100%;
 	}
 
 	.resume-image video {
-		/* width: 80%; Adjust video width to fit within container */
-		width: 450px; /* Limit maximum width for larger screens */
+		width: 450px;
 	}
 }
 @media (max-width: 768px) {
-	nav {
+	/* nav {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
@@ -319,6 +366,47 @@ main {
 
 	.navbar-links a {
 		margin-left: 10px;
+	} */
+
+	.navbar-links {
+		display: none;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	.logo {
+		padding-left: 20px;
+		display: flex;
+		align-items: center;
+	}
+
+	.logo a {
+		display: flex;
+		justify-content: flex-start;
+		width: 100%;
+	}
+
+	.mobile-menu {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		background: #eae1e1;
+		padding: 10px;
+		position: absolute;
+		top: 60px;
+		right: 0;
+		left: 0;
+		z-index: 1000;
+	}
+
+	#menu-toggle:checked + .hamburger + .navbar-links {
+		display: none;
+	}
+
+	#menu-toggle:checked + .hamburger + .navbar-links + .mobile-menu {
+		display: flex;
 	}
 
 	main {
@@ -1024,7 +1112,7 @@ main {
 	padding: 50px 50px 60px 50px;
 	color: white;
 	text-align: left;
-	background-color: transparent; 
+	background-color: transparent;
 	box-sizing: border-box;
 }
 
