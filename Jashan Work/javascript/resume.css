@@ -1,0 +1,88 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f9;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	padding: 20px;
+}
+
+h1,
+h2 {
+	text-align: center;
+	color: #333;
+}
+
+.form-preview-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-section {
+	width: 45%;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section label {
+	display: block;
+	margin: 10px 0 5px;
+	font-weight: bold;
+}
+
+.form-section input,
+.form-section textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.preview-section {
+	width: 45%;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-template {
+	padding: 20px;
+	background-color: #f9f9f9;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.resume-header {
+	text-align: center;
+}
+
+.resume-header img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+button {
+	display: block;
+	width: 200px;
+	margin: 20px auto;
+	padding: 10px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
