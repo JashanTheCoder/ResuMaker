@@ -10,6 +10,174 @@
     <a href="https://lordicon.com/"></a>
     <style>
 
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	background: linear-gradient(
+		90deg,
+		rgba(255, 240, 224, 0.5) 0%,
+		rgba(204, 218, 255, 0.5) 100%,
+		rgba(204, 215, 255, 0.3) 50%
+	);
+	box-shadow: none;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.header-scroll {
+	box-shadow: 0 4px 8px rgba(255, 230, 204, 0.5);
+	background: #eae1e1;
+}
+
+.logo {
+	font-size: 1.8em;
+	font-weight: bold;
+	padding-left: 5.5rem;
+	display: flex;
+	align-items: center;
+}
+.logo a {
+	text-decoration: none;
+	color: #000;
+}
+.logo-span {
+	display: flex;
+	align-items: center;
+}
+.navbar-links {
+	display: flex;
+	align-items: center;
+	padding-right: 100px;
+}
+
+.navbar-links a {
+	padding: 5px;
+	margin-left: 20px;
+	text-decoration: none;
+	font-weight: 600;
+	color: black;
+	position: relative;
+}
+
+.navbar-links a:hover {
+	color: #007bff;
+	cursor: pointer;
+}
+
+.hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 25px;
+}
+
+.hamburger div {
+	width: 25px;
+	height: 3px;
+	background-color: #000;
+	margin: 4px 0;
+	transition: 0.4s;
+}
+
+#menu-toggle {
+	display: none;
+}
+
+#menu-toggle:checked + .hamburger + .navbar-links {
+	display: none;
+}
+
+#menu-toggle:checked + .hamburger + .navbar-links + .mobile-menu {
+	display: flex;
+}
+
+.mobile-menu {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	background: #eae1e1;
+	padding: 10px;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.mobile-menu a {
+	padding: 10px;
+	text-decoration: none;
+	font-weight: 600;
+	color: black;
+}
+
+@media (max-width: 768px) {
+	nav {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0px;
+	}
+
+	.logo {
+		padding-left: 20px;
+	}
+
+	.navbar-links {
+		padding-right: 20px;
+	}
+
+	.navbar-links a {
+		margin-left: 10px;
+	}
+	.navbar-links {
+		display: none;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	.logo {
+		padding-left: 20px;
+		display: flex;
+		align-items: center;
+	}
+
+	.logo a {
+		display: flex;
+		justify-content: flex-start;
+		width: 100%;
+	}
+
+	.mobile-menu {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		background: #eae1e1;
+		padding: 10px;
+		position: absolute;
+		top: 60px;
+		right: 0;
+		left: 0;
+		z-index: 1000;
+	}
+
+	#menu-toggle:checked + .hamburger + .navbar-links {
+		display: none;
+	}
+
+	#menu-toggle:checked + .hamburger + .navbar-links + .mobile-menu {
+		display: flex;
+	}
+}
       
       .center-container {
         width: 100%;
@@ -167,6 +335,61 @@
     rgba(211, 223, 255, 0.9) 100%,
     rgba(204, 230, 255, 0.299) 50%
 );">
+
+<nav>
+  <div class="logo">
+    <a href="./main-page-biobanao.html">
+      <span class="logo-span">
+        <lord-icon
+          src="https://cdn.lordicon.com/ghhwiltn.json"
+          trigger="hover"
+          stroke="bold"
+          colors="primary:#121331,secondary:#007bff"
+          style="width: 1.1em; height: 1.1em"
+        ></lord-icon>
+        <span
+          style="display: inline-block; text-align: center; width: 100%"
+        >
+          Bio<span style="color: #007bff">बनाओ</span>
+        </span>
+      </span>
+    </a>
+  </div>
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </label>
+  <div class="navbar-links">
+    <a
+      href="file:///C:/Users/DELL/Desktop/resume%20builder/Amanpreet%20work/aboutusextension.html"
+      class="link"
+      >About Us</a
+    >
+    <a
+      href="file:///C:/Users/DELL/Desktop/resume%20builder/Amanpreet%20work/faq.html"
+      class="link"
+      >FA&Qs</a
+    >
+    <a href="./first-resume.html.html" class="link">Templates</a>
+    <a href="./login.html" class="link">Login</a>
+  </div>
+  <div class="mobile-menu">
+    <a
+      href="file:///C:/Users/DELL/Desktop/resume%20builder/Amanpreet%20work/aboutusextension.html"
+      class="link"
+      >About Us</a
+    >
+    <a
+      href="file:///C:/Users/DELL/Desktop/resume%20builder/Amanpreet%20work/faq.html"
+      class="link"
+      >FA&Qs</a
+    >
+    <a href="./first-resume.html.html" class="link">Templates</a>
+    <a href="./login.html" class="link">Login</a>
+  </div>
+</nav>
 
 
 
@@ -491,38 +714,7 @@
 
 </div>
 
-    <!-- <div class="containers">
-        <h1>Check your resume for grammatical and punctuation errors</h1>
-        <p class="descriptions">A built-in content checker tool helping you stay on top of grammar errors and clichés</p>
-        <ul class="checklists">
-            <li>✅ Wording and readability analysis</li>
-            <li>✅ Eliminate typos and grammatical errors</li>
-            <li>✅ Content suggestions based on your job and experience</li>
-        </ul>
-        <img src="Images/line.webp" style="width: 300px;">
-    </div>
-
-    <div class="containerss">
-        <h1>Resume tailoring based on the job you’re applying for</h1>
-        <p class="descriptionss">Quickly ensure that your resume covers key skills and experiences by pasting the job ad you’re applying for</p>
-        <ul class="checklistss">
-            <li>✅ Skills and experience section analysis</li>
-            <li>✅ Actionable checklist of what else to add to your resume</li>
-            <li>✅ Instant comparison between your resume and the job posting</li>
-        </ul>
-        <img src="Images/lineup.webp" style="width: 300px;">
-    </div>
-
-    <div class="containersss">
-        <h1>20+ Professionally designed resume sections</h1>
-        <p class="descriptionsss">Express your professional history without limitations or worry about how your resume looks</p>
-        <ul class="checklistsss">
-                <li>✅ Tailored feedback on your skills and experiences</li>
-                <li>✅ Comprehensive checklist for enhancing your resume</li>
-                <li>✅ Quick comparison between your resume and desired job criteria</li>
-            </ul>
-        
-    </div> -->
+   
 
     <div class="youtube-section">
 
@@ -685,6 +877,101 @@ prev.addEventListener('click', function(){
 
     
 </script>
+
+ <!--**************************************************************************************** footer  ********************************************************-->
+
+ <section style="position: absolute; margin-top: 1600px;">
+
+ <div class="footer-waves">
+  <!-- Waves SVG -->
+  <svg
+    class="waves"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28"
+    preserveAspectRatio="none"
+    shape-rendering="auto"
+  >
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      />
+    </defs>
+    <g class="parallax">
+      <use
+        xlink:href="#gentle-wave"
+        x="48"
+        y="0"
+        fill="rgba(255,255,255,0.7)"
+      />
+      <use
+        xlink:href="#gentle-wave"
+        x="48"
+        y="3"
+        fill="rgba(255,255,255,0.5)"
+      />
+      <use
+        xlink:href="#gentle-wave"
+        x="48"
+        y="5"
+        fill="rgba(255,255,255,0.3)"
+      />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+  </svg>
+
+  <!-- Footer Content -->
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <a href="./meet-our-team.html"><h3>BIO<span>BANAO</span></h3> </a>
+      
+      <p class="footer-links">
+        <a href="#">Home</a> | <a href="#">About</a> |
+        <a href="#">Contact</a> |
+        <a href="#">Fa&Q</a>
+      </p>
+      <p class="footer-company-name">
+        Copyright © 2024 <strong>BIO-BANAO</strong> All rights reserved
+      </p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Ambala, </span> Haryana</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91 7988734559</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p>
+          <a href="mailto:thisissinghamanpreet@gmail.com"></a>
+            <strong style="color: black;"> biobanao@gmail.com</strong></a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About the company</span>
+        <strong>Bio-Banao</strong> is a Resume Maker website where you can
+        expect every type of resume template in which you can fill your information and get your resume in minutes.
+      </p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</section>
 
 
 
