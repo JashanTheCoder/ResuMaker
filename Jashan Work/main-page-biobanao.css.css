@@ -960,8 +960,8 @@ main {
 
 /************************************************************************** review section******************************************************************** */
 .customer-reviews {
-	padding-left: 30vh;
-	padding-right: 30vh;
+	/* padding-left: 30vh; */
+	/* padding-right: 30vh; */
 	max-width: 100vw;
 	margin: 0 auto;
 	overflow: hidden;
@@ -969,106 +969,158 @@ main {
 }
 
 .customer-reviews h2 {
-	font-size: 3rem;
+	font-size: 2.7rem;
 	font-weight: 900;
-	margin-bottom: 8px;
+	text-align: center;
+	margin-bottom: -20px;
 }
-
-.reviews-container {
-	display: flex;
-	gap: 40px;
-	overflow-x: scroll;
-	scroll-snap-type: x mandatory;
-	padding-bottom: 20px;
-	animation: scrollReviews 15s linear infinite;
-}
-/* .reviews-container {
-	display: flex;
-	gap: 40px;
-	overflow: hidden; 
-	padding-bottom: 20px;
-} */
 
 .review {
-	flex: 0 0 30%;
-	padding: 20px;
-	border-radius: 10px;
-	scroll-snap-align: start;
-	animation: moveReview 10s ease-in 2;
-}
-
-/* @keyframes moveReview {
-	0% {
-		transform: translateX(0%);
-	}
-	100% {
-		transform: translateX(-100%);
-	}
-} */
-
-.review p {
-	font-size: 1.2rem;
-	color: #505255;
-	line-height: 1.5;
 	position: relative;
-	padding-left: 40px;
+	width: 100%;
+	min-height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background: linear-gradient(
+		90deg,
+		rgba(255, 240, 224, 0.9) 0%,
+		rgba(211, 223, 255, 0.9) 100%,
+		rgba(204, 230, 255, 0.299) 50%
+	); */
+	overflow: hidden;
 }
 
-.review p:before {
-	content: '“';
-	font-size: 3rem;
+.swiper-container {
+	width: 100%;
+	/* height: 100%; */
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+.content p {
+	font-size: 22px;
+	font-style: italic;
+	font-weight: 700;
+	color: #000;
+}
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 320px;
+	/* height: 300px; */
+	text-align: center;
+	/* font-size: 18px; */
+	background: #fff;
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+	filter: blur(4px);
+}
+.swiper-slide-active {
+	filter: blur(0px);
+}
+
+.testimonialBox {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	padding-top: 90px;
 	color: #007bff;
-	position: absolute;
-	left: 0;
-	top: -10px;
 }
-
-.review .reviewer {
+.testimonialBox .quote {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	opacity: 0.2;
+}
+.testimonialBox .details {
 	display: flex;
 	align-items: center;
 	margin-top: 20px;
 }
-
-.review .reviewer img {
-	width: 50px;
-	height: 50px;
+.testimonialBox .details .imgBx {
+	position: relative;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
-	margin-right: 15px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+.testimonialBox .details .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.testimonialBox .details h3 {
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #2196f3;
+	line-height: 1.1em;
+}
+.testimonialBox .details h3 span {
+	font-size: 15px;
+	color: #666;
+}
+/* Mobile Styles */
+@media (max-width: 767px) {
+	.swiper-container {
+		width: 90%; /* Make the swiper container take up most of the width */
+	}
+
+	.swiper-slide {
+		width: 100%; /* Full width for slides */
+		margin: 0 auto; /* Center the slides */
+	}
+
+	.testimonialBox {
+		padding: 20px; /* Adjust padding for smaller screens */
+	}
+
+	.testimonialBox .quote {
+		font-size: 24px; /* Reduce size of quote icon */
+	}
+
+	.testimonialBox .details h3 {
+		font-size: 14px; /* Adjust name size */
+	}
 }
 
-.review .reviewer-info {
-	font-size: 0.9rem;
-}
-.review .stars {
-	color: #ffd700;
-	font-size: 1.2rem;
-}
-
-@media screen and (max-width: 1024px) {
-	.customer-reviews {
-		padding-left: 10vh; /* Adjust padding for medium screens */
-		padding-right: 10vh;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.customer-reviews {
-		padding-left: 5vh; /* Reduce padding for smaller screens */
-		padding-right: 5vh;
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.swiper-container {
+		width: 80%; /* Adjust swiper container for tablets */
 	}
 
-	/* Ensure reviews take up the full width on smaller screens */
-	.review {
-		flex: 0 0 90%; /* Expand the width of individual reviews on small screens */
+	.swiper-slide {
+		width: 75%; /* Adjust slide width */
 	}
-	.customer-reviews h2 {
-		font-size: 1.9rem;
-		text-align: center;
+
+	.testimonialBox {
+		padding: 30px; /* Adjust padding for tablets */
 	}
-	.review p {
-		font-size: 1rem;
+
+	.testimonialBox .quote {
+		font-size: 30px; /* Adjust size of quote icon */
+	}
+
+	.testimonialBox .details h3 {
+		font-size: 15px; /* Adjust name size */
 	}
 }
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+	.swiper-container {
+		width: 30%; /* Use original width for desktops */
+	}
+
+	.swiper-slide {
+		width: 320px; /* Keep the fixed width for slides */
+	}
+}
+
 /*********************************************************************************** Footer *********************************************************************/
 
 /* Footer Waves and Content */
