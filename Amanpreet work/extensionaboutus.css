@@ -46,10 +46,27 @@ nav {
     align-items: center;
 }
 
+.navbar-links {
+    display: flex;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.navbar-links a {
+    padding: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    position: relative;
+}
+
+.navbar-links a:hover {
+    color: #007bff;
+    cursor: pointer;
+}
+
 /* Frontaboutus Section */
-/*main section*/
-/* Original CSS */
-/* Original CSS */
 .frontaboutus {
     width: 100%;
     height: 800px;
@@ -173,149 +190,6 @@ nav {
 .logos img:hover {
     opacity: 1;
 }
-
-/* Responsive Styles */
-/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
-@media (max-width: 768px) {
-    .frontaboutus {
-        height: 600px; 
-    }
-    
-    .frontaboutus:after {
-        height: 150px; 
-        animation: expandCloudsSmaller 5s ease-in-out forwards;
-    }
-
-    @keyframes expandCloudsSmaller {
-        0% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1.3);
-        }
-    }
-
-    .textaboutus {
-        margin-bottom: 200px; 
-    }
-
-    .textaboutus h2 {
-        font-size: 35px; 
-    }
-
-    .textaboutus p {
-        font-size: 20px; 
-    }
-
-    .rocket img {
-        width: 40px; 
-        top: 760px; 
-    }
-}
-
-@media (max-width: 480px) {
-    .frontaboutus {
-        height: 500px; 
-    }
-
-    .frontaboutus:after {
-        height: 139px; 
-    }
-
-    .textaboutus {
-        margin-bottom: 100px; 
-    }
-
-    .textaboutus h2 {
-        font-size: 25px; 
-    }
-
-    .textaboutus p {
-        font-size: 18px; 
-    }
-
-    .rocket img {
-        width: 30px; 
-        top: 660px; 
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .frontaboutus {
-        height: 700px; /* Adjust height for tablets */
-    }
-
-    .frontaboutus:after {
-        height: 200px; /* Adjust cloud height for tablets */
-        animation: expandCloudsTablet 5s ease-in-out forwards;
-    }
-
-    @keyframes expandCloudsTablet {
-        0% {
-            transform: scale(1.2);
-        }
-        100% {
-            transform: scale(1.35);
-        }
-    }
-
-    .textaboutus {
-        margin-bottom: 150px; /* Adjust margin for tablets */
-    }
-
-    .textaboutus h2 {
-        font-size: 40px; /* Adjust font size for tablets */
-    }
-
-    .textaboutus p {
-        font-size: 22px; /* Adjust font size for tablets */
-    }
-
-    .rocket img {
-        width: 50px; /* Adjust rocket size for tablets */
-        top: 770px; /* Adjust rocket position */
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .frontaboutus {
-        height: 800px; /* Adjust height for laptops */
-    }
-
-    .frontaboutus:after {
-        height: 250px; /* Adjust cloud height for laptops */
-        animation: expandCloudsLaptop 5s ease-in-out forwards;
-    }
-
-    @keyframes expandCloudsLaptop {
-        0% {
-            transform: scale(1.3);
-        }
-        100% {
-            transform: scale(1.4);
-        }
-    }
-
-    .textaboutus {
-        margin-bottom: 250px; /* Adjust margin for laptops */
-    }
-
-    .textaboutus h2 {
-        font-size: 45px; /* Adjust font size for laptops */
-    }
-
-    .textaboutus p {
-        font-size: 24px; /* Adjust font size for laptops */
-    }
-
-    .rocket img {
-        width: 60px; /* Adjust rocket size for laptops */
-        top: 780px; /* Adjust rocket position */
-    }
-}
-
-
-
 
 /* Origin Section */
 .origin {

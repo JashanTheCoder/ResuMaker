@@ -1,0 +1,306 @@
+.resume-template-section {
+    padding: 20px;
+    margin: 60px ; 
+    text-align: center;
+}
+
+.resume-title {
+    font-size: 36px;
+    margin-left: 450px;
+    font-weight: bold;
+    width: 500px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.review-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.author-info, .reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.author-img, .reviewer-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.author-info a, .reviewer-info a {
+    font-weight: bold;
+    color: #FF6633;
+    text-decoration: none;
+}
+
+.description {
+   margin-left: 350px;
+    color: #555;
+    width: 700px;
+    margin-bottom: 10px;
+}
+
+.description a {
+    color: #FF6633;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.date {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #FF6633;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #E04E1A;
+}
+
+.rating-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.rating-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.rating-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.view-text-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.view-text-button:hover {
+    background-color: #e6e6e6;
+}
+
+
+/*/////////////////////////////////////////////////////////// /////side bar code css /////////////////// */
+
+.content-content {
+    border: 2px solid transparent; /* Initial border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around the content */
+    position: relative; /* For positioning the shadow */
+    overflow: hidden; /* Hide overflow */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.content-content:before {
+    content: ''; /* Creates a pseudo-element */
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    bottom: 0; /* Align to bottom */
+    border-radius: 8px; /* Match rounded corners */
+    box-shadow: 0 0 15px black; /* Black shadow */
+    z-index: -1; /* Place behind the content */
+}
+
+p, ul {
+    color: rgba(0, 0, 0, 0.6); /* Fade effect */
+    transition: color 0.3s ease; /* Smooth transition for fade */
+   
+}
+
+.baby-resume-card-animation {
+    position: relative;
+    height: 800px;
+    width: 800px;
+    margin: 0 auto;
+  }
+  
+  .baby-resume-card-animation svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rotate 8s infinite ease-in-out;
+    transform-origin: center;
+  }
+  
+  /* Animating the first SVG */
+  .first {
+    animation-delay: 0s;
+  }
+  
+  /* Animating the second SVG */
+  .second {
+    animation-delay: 2s;
+  }
+  
+  /* Animating the third SVG */
+  .third {
+    animation-delay: 4s;
+  }
+  
+  /* Keyframes for rotating effect */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+
+ul {
+    list-style-type: disc; /* Bulleted list */
+    padding-left: 20px; /* Indent for list */
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+li p {
+    display: inline; /* Inline for titles */
+    font-weight: bold; /* Bold titles */
+}
+.container {
+    display: flex;
+    max-width: 1410px; /* Optional: limit the max width */
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 550px; /* Set a fixed width for the sidebar */
+  
+    padding: 15px;
+    position: sticky; /* Make the sidebar sticky */
+    top: 0; /* Stick to the top */
+    height: 100vh; /* Full height of the viewport */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0; /* Spacing between items */
+}
+
+.sidebar a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link color */
+}
+
+.sidebar a:hover {
+    color: #FF6633; /* Change color on hover */
+}
+
+.content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+    position: relative; /* Establish a positioning context for the fixed section */
+}
+
+.fixed-section {
+    width: 400px; /* Set a fixed width for the right section */
+    background-color: #fff; /* Background color for the fixed section */
+    border-left: 1px solid #ddd; /* Optional: border to separate from content */
+    padding: 20px;
+    position: sticky; /* Fix the position within the content area */
+    top: 20px; /* Position from the top of the content area */
+    height: calc(100vh - 40px); /* Full height of the viewport minus some space for margins */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+.cta-button {
+    background-color: #FF6633; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.cta-button:hover {
+    background-color: #E04E1A; /* Darker color on hover */
+}
+
+
+.section {
+    background-color: #f5fcf7;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .category {
+    background-color: #e9f7ef;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .category h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .category .icon {
+    margin-right: 10px;
+  }
+  
+  .role {
+    margin-bottom: 10px;
+  }
+  
+  .role p {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .role strong {
+    font-size: 16px;
+    color: #2d6a4f;
+  }
+  
