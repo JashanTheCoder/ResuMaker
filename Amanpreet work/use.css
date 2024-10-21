@@ -1,0 +1,127 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.features-section {
+    text-align: center;
+    padding: 50px 20px;
+   
+}
+
+.features-section h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #2b2b2b;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 20px;
+    justify-items: center;
+    max-width: 900px; /* Shrink the feature container */
+    margin: 0 auto; /* Center the container */
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    max-width: 600px;
+    padding: 15px;
+}
+
+.feature img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #2b2b2b;
+}
+
+.feature p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .feature img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .feature-text {
+        align-items: center;
+    }
+}
+/* Define the keyframes for the pop-up animation */
+@keyframes popUpss {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1.5;
+    }
+    /* 100% {
+        transform: scale(1);
+        opacity: 1;
+    } */
+}
+
+/* Apply the animation to the images */
+.features-container .feature .img img {
+    border-radius: 20px;
+    animation: popUpss ease-in-out;
+    animation-timeline : view();
+    /* animation: popUp 0.6s ease-in-out;
+    animation-fill-mode: both; Ensure that the final state is maintained */
+}
+
+/* Optional: Staggered effect for the images */
+.features-container .feature:nth-child(1) .img img {
+    animation-delay: 0s;
+}
+.features-container .feature:nth-child(2) .img img {
+    animation-delay: 0.2s;
+}
+.features-container .feature:nth-child(3) .img img {
+    animation-delay: 0.4s;
+}
+.features-container .feature:nth-child(4) .img img {
+    animation-delay: 0.6s;
+}
+.features-container .feature:nth-child(5) .img img {
+    animation-delay: 0.8s;
+}
+.features-container .feature:nth-child(6) .img img {
+    animation-delay: 1s;
+}

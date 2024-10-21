@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="preloader.css">
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="preloader-content active">
+            <img src="Images/geniousface.jpg" alt="Illustration" class="preloader-image">
+            <h2>Let’s create a resume for the</h2>
+            <h1 class="highlight">Genius</h1>
+            <h2>in you!</h2>
+        </div>
+    
+        <div class="preloader-content">
+            <img src="Images/nurseface.png" alt="Illustration" class="preloader-image">
+            <h2>Let’s create a resume for the</h2>
+            <h1 class="highlight">Best Nurse</h1>
+            <h2>in you!</h2>
+        </div>
+    
+        <div class="preloader-content">
+            <img src="Images/drface2.jpg" alt="Illustration" class="preloader-image">
+            <h2>Let’s create a resume for the</h2>
+            <h1 class="highlight">Brilliant Physician</h1>
+            <h2>in you!</h2>
+        </div>
+    
+        <div class="preloader-content">
+            <img src="Images/saleexecutive.png" alt="Illustration" class="preloader-image">
+            <h2>Let’s create a resume for the</h2>
+            <h1 class="highlight">Top Sales Executive</h1>
+            <h2>in you!</h2>
+        </div>
+    
+        <div class="preloader-content">
+            <img src="Images/chefgirl.jpg" alt="Illustration" class="preloader-image">
+            <h2>Let’s create a resume for the</h2>
+            <h1 class="highlight">Top Chef</h1>
+            <h2>in you!</h2>
+        </div>
+    <br>
+    <br>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+    
+
+    
+  
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const preloader = document.getElementById("preloader");
+    const preloaderContents = document.querySelectorAll(".preloader-content");
+    const progressBar = document.querySelector(".progress");
+    const totalContents = preloaderContents.length;
+    let currentIndex = 0;
+
+    function showNextContent() {
+        // Hide all contents
+        preloaderContents.forEach(content => content.style.display = "none");
+        
+        // Show current content
+        preloaderContents[currentIndex].style.display = "block";
+
+        // Update progress
+        const progress = ((currentIndex + 1) / totalContents) * 100;
+        progressBar.style.width = `${progress}%`;
+
+        // Move to the next content or finish
+        if (currentIndex < totalContents - 1) {
+            currentIndex++;
+            setTimeout(showNextContent, 2000); // Change this duration to adjust the time each div is displayed
+        } else {
+            // End progress bar after last content
+            setTimeout(() => {
+                preloader.style.opacity = "0";
+                setTimeout(() => {
+                    preloader.style.display = "none"; // Hide preloader after fading out
+                }, 500);
+            }, 2000); // Time to show the last content before finishing
+        }
+    }
+
+    showNextContent();
+});
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 50</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="extension.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="dFlex aic jcsb">
+                <div class="logo">
+                    <h1>BIO-<span style="color: #007bff;">BANAO</span></h1>
+                </div>
+                <ul>
+                    <li><a class="active" href="">FAQ</a></li>
+                    <li><a href="">About</a></li>
+                   
+                    <li><a href="">Contact</a></li>
+                  
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section id="contactHeader">
+            <div class="container">
+                <div class="title">
+                    <h2 class="mb25">Frequently Asked Questions</h2>
+                    <span class="underline"></span>
+                    <p>Welcome to the FAQ section! Here, you'll find answers to some of the most commonly asked questions about my services, processes, and web development in general. If you have any other questions, feel free to reach out through the contact page.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 style=" font-family: 'Arial', sans-serif;
+            font-size: 36px;
+            font-weight: 760;
+            color: #2b2b2b;
+            line-height: 1.3;
+            margin-right: 100px ; 
+            letter-spacing: 0.5px; margin-bottom: 2px;
+          ">Frequently Asked Questions</h2>
+            <span class="underline"></span>
+            <div class="features-container">
+                <div class="feature">
+                   
+                <div class="text">
+                    <h3>Will my Premium account renew automatically?</h3>
+                    <p>No, our pricing model is not subscription based. Therefore, you will not be charged automatically without your consent.</p>
+                </div>
+                    </div>
+                <div class="feature">
+                    
+                    <div class="text"> <h3>Will my information be saved after the Premium period expires?</h3>
+                        <p>All the information will be saved in your account, even when the Premium period expires.</p>
+                    </div>
+                   </div>
+                <div class="feature">
+                 
+                   <div class="text">
+                    <h3>Are there any hidden costs?</h3>
+                    <p>There are no hidden costs. After selecting the period, the total price that you will be charged can be seen before introducing any payment details. (This excludes the charges required by the bank transfer.)</p>
+                    </div> 
+                </div>
+            
+                <div class="feature">
+                    
+                    <div class="text">
+                    <h3>Can I customize the templates?</h3>
+                    <p>Absolutely! Our templates are highly customizable. You can change fonts, colors, and layouts to match your personal style or the industry standard. This flexibility allows you to create a resume that stands out while maintaining professionalism</p>
+                </div> </div>
+                <div class="feature">
+                    
+                    <div class="text">
+                    <h3>What information should I include in my resume ?</h3>
+                    <p>Your resume should feature your contact information, a strong professional summary, detailed work experience with accomplishments, education background, relevant skills, and certifications. Tailor each section to align with the job description and highlight experiences that demonstrate your qualifications</p>
+                </div> </div>
+                <div class="feature">
+                    
+                    <div class="text">
+                    <h3>How can I contact support if I have issues?</h3>
+                    <p>If you encounter any problems or have questions, please contact our support team through the website's contact form or email us at biobanao.com. Our team is dedicated to providing prompt assistance to ensure a smooth experience..</p>
+                </div> </div>
+            </div>
+        </section>  
+
+        <section id="interestSec">
+            <div class="container">
+                <div class="content">
+                    <h4 class="textC mb25">If you have any other questions or need further assistance, please don't hesitate to reach out. I'm here to help!</h4>
+                    <button class="btn primary">Contact</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="dFlex aic jcc">
+                <div class="content">
+                    <div class="logo">
+                        <h2>Logo</h2>
+                    </div>
+                    <ul>
+                        <li><a href="">In</a></li>
+                        <li><a href="">Fb</a></li>
+                        <li><a href="">Tw</a></li>
+                        <li><a href="">Yo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <div class="container">
+                <div class="dFlex aic jcsb">
+                    <p>&#169; O Tech School, All right reserved</p>
+                    <p>Made with Avinab</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const faqItems = document.querySelectorAll('.faqItem');
+        faqItems.forEach(item =>{
+            const button = item.querySelector('button');
+            const ans = item.querySelector('.ans');
+
+            button.addEventListener('click', ()=>{
+
+                button.parentNode.classList.toggle('open');
+
+                faqItems.forEach(i=>{
+                    if(i != item){
+                        i.classList.remove('open');
+                    }
+                })
+
+
+            })
+        })
+    </script>
+</body>
+</html>

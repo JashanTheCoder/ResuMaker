@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Template</title>
+    <link rel="stylesheet" href="teacher.css">
+    <link rel="stylesheet" href="preloader.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .resume-header {
+            text-align: center;
+            padding: 20px;
+            width: 100%; /* Make header take full width */
+        }
+
+        .resume-title {
+            font-size: 2em;
+            margin: 0.5em 0;
+        }
+
+        .description {
+            font-size: 1em;
+            margin: 1em 0;
+            max-width: 800px; /* Limit max width for larger screens */
+        }
+
+        .cta-button {
+            background-color: rgba(244, 91, 117, 0.959);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: rgba(244, 91, 117, 1);
+        }
+
+        .bgcol {
+            background-color: rgb(232, 131, 193);
+            border-radius: 50px;
+            margin-top: 50px;
+            position: relative;
+            padding: 20px;
+            max-width: 1000px; /* Max width for larger screens */
+            width: 90%; /* Responsive width */
+            overflow: hidden; /* Ensure no overflow from children */
+        }
+
+        .baby-resume-card-animation {
+            position: relative;
+            height: 400px; /* Adjust height for better responsiveness */
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .imgtemp {
+            position: relative;
+            margin: 20px auto; /* Center the image */
+            max-width: 100%; /* Ensure the image scales down */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+        }
+
+        .imgtemp img {
+            width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 600px; /* Limit max height */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .resume-title {
+                font-size: 1.5em; /* Smaller title on small screens */
+            }
+
+            .description {
+                font-size: 0.9em; /* Smaller description */
+            }
+
+            .cta-button {
+                font-size: 14px; /* Smaller button text */
+                width: 100%; /* Full width button */
+            }
+
+            .bgcol {
+                margin-top: 30px; /* Reduced margin */
+            }
+
+            .baby-resume-card-animation {
+                height: 300px; /* Reduced height for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="resume-template-section">
+    <div class="resume-header">
+        <h1 class="resume-title">4+ High School Resume Examples & Templates</h1>
+        <p class="description">
+            Struggling to write a resume as a high school student? Whether you're applying for your first job or putting together college applications, our high school resume templates, high school cover letter, and writing tips will help you make an impressive job application (even if you have no work experience).
+        </p>
+        <button class="cta-button">Build My Resume Now</button>
+    </div>
+
+    <div class="bgcol">
+        <!-- Animation SVGs Container -->
+        <div class="baby-resume-card-animation">
+            <!-- First SVG -->
+            <svg width="100%" height="100%" class="first" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="799" height="799" rx="399.5" stroke="#FACBB3" stroke-dasharray="2 2"></rect>
+            </svg>
+
+            <!-- Second SVG -->
+            <svg width="100%" height="100%" class="second" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="799" height="799" rx="399.5" stroke="#FACBB3" stroke-dasharray="2 2"></rect>
+            </svg>
+
+            <!-- Third SVG -->
+            <svg width="100%" height="100%" class="third" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="799" height="799" rx="399.5" stroke="#FACBB3" stroke-dasharray="2 2"></rect>
+            </svg>
+        </div>
+
+        <!-- Image Section -->
+        <div class="imgtemp">
+            <img src="Images/High-School-Resume-Example-1.avif" alt="Resume Example">
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

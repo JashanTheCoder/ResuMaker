@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="imageslider.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <a href="https://lordicon.com/"></a>
+    <style>
+
+      
+      .center-container {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      
+      .layered-stack {
+        width: 100%;
+        height: 300vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .right-section,
+      .left-section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        box-sizing: border-box;
+        flex-basis: 50%;
+      }
+      
+      .card-deck {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      
+      .single-card {
+        width: 350px;
+        height: 350px;
+        box-sizing: border-box;
+        padding: 35px;
+        border-radius: 6mm;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: 0.5s ease-in-out;
+      }
+      
+      .single-card:nth-child(1) {
+        background: rgb(64, 122, 255);
+        z-index: 4;
+      }
+      
+      .single-card:nth-child(2) {
+        background: rgb(221, 62, 88);
+        z-index: 3;
+      }
+      
+      .single-card:nth-child(3) {
+        background: rgb(186, 113, 245);
+        z-index: 2;
+      }
+      
+      .single-card:nth-child(4) {
+        background: rgb(247, 92, 208);
+        z-index: 1;
+      }
+      
+      .sub-heading {
+        font-family: poppins;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      
+      .main-content {
+        font-family: poppins;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 54px;
+      }
+      
+      single-card.active-card {
+        transform-origin: bottom left;
+      }
+      
+      .left-section {
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      .main-title {
+        width: 420px;
+        font-size: 84px;
+        font-family: poppins;
+        font-weight: 700;
+        line-height: 88px;
+      }
+      
+      .secondary-title {
+        width: 420px;
+        font-family: poppins;
+        font-size: 14px;
+        margin-top: 30px;
+      }
+      
+      .secondary-title button {
+        font-family: poppins;
+        font-size: 14px;
+        padding: 15px 30px;
+        background: black;
+        color: white;
+        border-radius: 8mm;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      
+      .top-section,
+      .bottom-section {
+        width: 100%;
+        height: 100vh;
+        font-family: poppins;
+        font-size: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      /*CSS Code for responsiveness*/
+      @media screen and (max-width: 800px) {
+        .left-section {
+          position: relative;
+          width: 100vw;
+        }
+      }
+
+      .main-title {
+    font-size: 30px; /* Adjust the size as needed */
+    visibility: hidden; /* Hide the content initially */
+      }
+  
+
+
+
+
+</style>      
+</head>
+<body style="background: linear-gradient(
+    90deg,
+    rgba(255, 240, 224, 0.9) 0%,
+    rgba(211, 223, 255, 0.9) 100%,
+    rgba(204, 230, 255, 0.299) 50%
+);">
+
+
+
+<section>
+    <div class="center-container">
+        <div class="layered-stack">
+          <div class="left-section">
+            <div class="main-title"></div>
+            <script>document.addEventListener('DOMContentLoaded', function () {
+                const titleElement = document.querySelector('.main-title');
+                const newContent = "Why Choose BioBanao?";
+                let index = 0;
+            
+                // Show the title element when typing starts
+                titleElement.style.visibility = 'visible'; 
+            
+                function typeWriter() {
+                    if (index < newContent.length) {
+                        titleElement.textContent += newContent.charAt(index);
+                        index++;
+                        setTimeout(typeWriter, 100); // Adjust typing speed here (100ms)
+                    } else {
+                        cursorEffect(); // Start the cursor effect after typing is done
+                    }
+                }
+            
+                function cursorEffect() {
+                    let cursorVisible = true;
+                    setInterval(() => {
+                        titleElement.textContent = cursorVisible ? newContent + ' |' : newContent;
+                        cursorVisible = !cursorVisible;
+                    }, 500); // Adjust cursor blink speed here (500ms)
+                }
+            
+                typeWriter(); // Start typing effect
+            });
+            </script>
+            <div class="secondary-title" style="font-size: 15px;">
+                BioBanao simplifies the resume creation process. Whether you're starting from scratch or updating an old CV, our platform makes it effortless to showcase your skills, experiences, and qualifications.
+                <br />
+                <a href="roughwork.html" class="button" style="
+                display: inline-block; 
+                padding: 10px 20px; 
+                font-size: 16px; 
+                color: white; /* Text color */
+                background-color: black; /* Button background color */
+                border: none; 
+                border-radius: 5px; 
+                text-decoration: none; /* Remove underline */
+                text-align: center; 
+                cursor: pointer; /* Change cursor on hover */
+                transition: background-color 0.3s ease; /* Smooth transition */
+                width: fit-content; 
+                margin-top: 200px;
+            ">Get Started Now</a> 
+            
+
+            </div>
+          </div>
+          <div class="right-section">
+            <div class="card-deck">
+              <div class="single-card">
+                <div class="sub-heading">Customizable Templates</div>
+                     
+                
+                <div class="main-content">Choose from a variety of templates</div>
+              </div>
+              <div class="single-card">
+                <div class="sub-heading">Time-Saving</div>
+                <div class="main-content">Create your resume in just minutes</div>
+              </div>
+              <div class="single-card">
+                <div class="sub-heading">Easy Formatting</div>
+                <div class="main-content">Professional resumes with one-click</div>
+              </div>
+              <div class="single-card">
+                <div class="sub-heading">Support</div>
+                <div class="main-content">Now it’s 24/7 support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      <script>
+        let cards = document.querySelectorAll(".single-card");
+        let stackArea = document.querySelector(".layered-stack");
+      
+        function rotateCards() {
+          let angle = 0;
+          cards.forEach((card) => {
+            if (card.classList.contains("active-card")) {
+              card.style.transform = `translate(-50%, -120vh) rotate(-48deg)`;
+            } else {
+              card.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+              angle = angle - 10;
+            }
+          });
+        }
+      
+        rotateCards();
+      
+        window.addEventListener("scroll", () => {
+          let proportion = stackArea.getBoundingClientRect().top / window.innerHeight;
+          if (proportion <= 0) {
+            let n = cards.length;
+            let index = Math.ceil((proportion * n) / 2);
+            index = Math.abs(index) - 1;
+            for (let i = 0; i < n; i++) {
+              if (i <= index) {
+                cards[i].classList.add("active-card");
+              } else {
+                cards[i].classList.remove("active-card");
+              }
+            }
+            rotateCards();
+          }
+        });
+      
+        // Code for responsiveness
+      
+        function adjust() {
+          let windowWidth = window.innerWidth;
+          let leftSection = document.querySelector(".left-section");
+          leftSection.remove();
+          if (windowWidth < 800) {
+            stackArea.insertAdjacentElement("beforebegin", leftSection);
+          } else {
+            stackArea.insertAdjacentElement("afterbegin", leftSection);
+          }
+        }
+        adjust();
+      
+        // Detect resize
+        window.addEventListener("resize", adjust);
+      </script>
+      
+</section>
+
+
+
+
+<!-- //////cards section 8 ///// featuring features  -->
+
+<section>
+    <div class="feature-section">
+        <div class="feature-card">
+            <img src="Images/animated_ai-laptop_blue.svg" alt="Leverage the latest tech" />
+            <h3>Leverage the latest tech</h3>
+            <p>Our resume builder lets you make a fully customized resume in minutes. Use our software to your advantage & apply for jobs faster.</p>
+        </div>
+        <div class="feature-card">
+            <img src="Images/animated_document_orange.svg" alt="Generate bullet points" />
+            <h3>Generate bullet points</h3>
+            <p>Your resume’s experience section is what employers care about most. Autogenerate experience bullet points that prove your on-the-job skills.</p>
+        </div>
+        <div class="feature-card">
+            <img src="Images/animated_database-success_green.svg" alt="Auto-format each section" />
+            <h3>Auto-format each section</h3>
+            <p>Formatting can be time-consuming. Don’t let margins & spacing slow you down – put in your details and the resume maker does the rest.</p>
+        </div>
+        <div class="feature-card">
+            <img src="Images/animated_download_pink.svg" alt="Instantly download your resume" />
+            <h3>Instantly download your resume</h3>
+            <p>Easily download your resume as a PDF, for Word, or in text format. Use the dashboard to test different templates to see what works best for you.</p>
+        </div>
+        <div class="feature-card">
+            <img src="Images/animated_concept-sharing_purple.svg" alt="Get expert feedback" />
+            <h3>Get expert feedback</h3>
+            <p>The job market is extremely competitive. Get an edge on other applicants with professional feedback after you’ve made your resume.</p>
+        </div>
+        <div class="feature-card">
+            <img src="Images/animated_rocket_yellow.svg" alt="Launch your job hunt" />
+            <h3>Launch your job hunt</h3>
+            <p>Equipped with your perfected resume, you’re ready to take on the job market. Get more job interviews & earn better job offers.</p>
+        </div>
+    </div>
+    
+      
+      
+</section>
+
+
+
+
+
+
+<section>
+
+
+    
+    <div class="resume-content-wrapper">
+        <div class="resume-text-section">
+            <h1 class="resume-heading-text">Look at resume examples for inspiration</h1>
+            <p class="resume-subtext">
+                We have over 400 professional resume examples on our website. Each sample was written and approved by our 
+                <a href="#" class="career-link">team of career experts</a>.
+            </p>
+        </div>
+    
+        <div class="resume-tags-section">
+            <div class="resume-tag-list">
+                <a href="acting.html" class="resume-tag acting-tag">🎭 Acting</a>
+                <a href="administrative.html" class="resume-tag admin-tag">🗂️ Administrative Assistant</a>
+                <a href="architecture.html" class="resume-tag architecture-tag">🏛️ Architecture</a>
+                <a href="customerservice.html" class="resume-tag customer-service-tag">🎧 Customer Service</a>
+                <a href="itdepartment.html" class="resume-tag it-tag">💻 IT</a>
+                <a href="graphicdesign.html" class="resume-tag design-tag">🎨 Graphic Design</a>
+                <a href="projectmanager.html" class="resume-tag project-manager-tag">📈 Project Manager</a>
+                <a href="marketing.html" class="resume-tag marketing-tag">📊 Marketing</a>
+                <a href="nursing.html" class="resume-tag nursing-tag">💉 Nursing</a>
+                <a href="teacher.html" class="resume-tag teacher-tag">🎓 Teacher</a>
+                <a href="highschool.html" class="resume-tag high-school-tag">🎓 High School</a>
+                <a href="medical-page.html" class="resume-tag medical-tag">🩺 Medical Assistant</a>
+                <a href="software-page.html" class="resume-tag software-tag">💻 Software Engineer</a>
+                <a href="cashier-page.html" class="resume-tag cashier-tag">💵 Cashier</a>
+                <a href="retail-page.html" class="resume-tag retail-tag">🛍️ Retail Sales Associate</a>
+            </div>
+            
+        </div>
+    </div>
+    
+</section>
+    <div class="imgslider">
+
+    
+    <div class="container">
+
+        <div class="slide">
+
+            
+            <div class="item" style="background-image: url(Images/Basic-Mid-Level-scaled.jpg);">
+                <div class="content">
+                    <div class="name">📝 Basic-Level Template</div>
+                    <div class="des">An ideal resume template for entry-level job seekers.
+                        <ul>
+                            <li>👶 Designed for entry-level professionals.</li>
+                            <li>✨ Simple and clean layout to highlight your skills.</li>
+                            <li>✍️ Easy to customize with your personal information.</li>
+                            
+                        </ul></div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Images/Information-Technology-IT-Mid-Level-scaled.jpg);">
+                <div class="content">
+                    <div class="name">💻 IT-Sector</div>
+    <div class="des">
+        A resume template tailored for IT professionals.
+        <ul>
+            <li>🔧 Showcases technical skills and certifications effectively.</li>
+            <li>🎨 Modern design with a focus on clarity and organization.</li>
+            <li>📂 Includes sections for projects, technologies used, and work experience.</li>
+        </ul></div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Images/teacher_template.jpg);">
+                <div class="content">
+                    <div class="name">📚 Teaching</div>
+    <div class="des">
+        A comprehensive resume template tailored for educators.
+        <ul>
+            <li>🏫 Designed to showcase teaching experience and educational background.</li>
+            <li>🎓 Highlights certifications, licenses, and relevant coursework.</li>
+            <li>🌟 Features sections for student achievements and teaching philosophy.</li>
+        </ul>
+</div>
+<button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/New-Grad-Nursing-Mid-Level-scaled.jpg);">
+                <div class="content">
+                    <div class="name">🏥 Nursing</div>
+                    <div class="des">
+                        A specialized resume template for nursing professionals.
+                        <ul>
+                            <li>💉 Emphasizes clinical experience and nursing certifications.</li>
+                            <li>🩺 Includes sections for patient care experience and technical skills.</li>
+                            <li>📋 Customizable layout to reflect your nursing specialties and achievements.</li>
+                        </ul>
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            
+
+            <div class="item" style="background-image: url(Images/Medical-Assistant_template.jpg);">
+                <div class="content">
+                    <div class="name">🩺 Medical Assistant</div>
+    <div class="des">
+        A tailored resume template designed for medical assistants.
+        <ul>
+            <li>🩻 Highlights clinical skills and administrative expertise.</li>
+            <li>👩‍⚕️ Includes sections for patient interaction and office management.</li>
+            <li>📜 Customizable format to showcase relevant certifications and training.</li>
+        </ul></div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Images/Customer-Service-Representative-Mid-Level-scaled.jpg);">
+                <div class="content">
+                    <div class="name">💼 Customer Services</div>
+                    <div class="des"> A professional resume template designed for customer service roles.
+                        <ul>
+                            <li>🗣️ Showcases communication skills and problem-solving abilities.</li>
+                            <li>🤝 Features sections for experience in customer relations and support.</li>
+                            <li>📑 Flexible layout to highlight key achievements and training.</li>
+                        </ul></div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+        </div>
+      
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- <div class="containers">
+        <h1>Check your resume for grammatical and punctuation errors</h1>
+        <p class="descriptions">A built-in content checker tool helping you stay on top of grammar errors and clichés</p>
+        <ul class="checklists">
+            <li>✅ Wording and readability analysis</li>
+            <li>✅ Eliminate typos and grammatical errors</li>
+            <li>✅ Content suggestions based on your job and experience</li>
+        </ul>
+        <img src="Images/line.webp" style="width: 300px;">
+    </div>
+
+    <div class="containerss">
+        <h1>Resume tailoring based on the job you’re applying for</h1>
+        <p class="descriptionss">Quickly ensure that your resume covers key skills and experiences by pasting the job ad you’re applying for</p>
+        <ul class="checklistss">
+            <li>✅ Skills and experience section analysis</li>
+            <li>✅ Actionable checklist of what else to add to your resume</li>
+            <li>✅ Instant comparison between your resume and the job posting</li>
+        </ul>
+        <img src="Images/lineup.webp" style="width: 300px;">
+    </div>
+
+    <div class="containersss">
+        <h1>20+ Professionally designed resume sections</h1>
+        <p class="descriptionsss">Express your professional history without limitations or worry about how your resume looks</p>
+        <ul class="checklistsss">
+                <li>✅ Tailored feedback on your skills and experiences</li>
+                <li>✅ Comprehensive checklist for enhancing your resume</li>
+                <li>✅ Quick comparison between your resume and desired job criteria</li>
+            </ul>
+        
+    </div> -->
+
+    <div class="youtube-section">
+
+        <div class="video-wrapper">
+            <h3 class="video-subtitle">Walkthroughs & Video Shorts</h3>
+            <h1 class="video-title">Watch videos for more resume-writing ideas</h1>
+            <p class="video-description">
+                If you’d rather master the arts of resume writing and formatting through video content, we’ve got you covered. Learn how to make a resume with no experience, use a resume template, or build your resume from the beginning with our resume builder in short but comprehensive YouTube videos and TikToks.
+            </p>
+        </div>
+        <h2>YouTube</h2>
+        <div class="video-container">
+            <div class="video">
+                <iframe id="video1" src="https://www.youtube.com/watch?v=QJAVtmSEwz4" frameborder="0" allowfullscreen></iframe>
+                <p>How to Make a Resume in 2024 (with free resume templates!)</p>
+                <span>5.5K views • 5 months ago</span>
+            </div>
+            <div class="video">
+                <iframe id="video2" src="https://www.youtube.com/embed/V2VXaFPsMY?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                <p>240+ Free Resume Template Downloads (Google Docs & MS...)</p>
+                <span>100K views • 2 years ago</span>
+            </div>
+            <div class="video">
+                <iframe id="video3" src="https://www.youtube.com/embed/LXSfa8eti9Q?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                <p>Make Your Resume with Resume Genius | Builder Walkthrough</p>
+                <span>6.7K views • 1 year ago</span>
+            </div>
+            <div class="video">
+                <iframe id="video4" src="https://www.youtube.com/embed/Lk5ju74lG7Y?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                <p>How to Write a Resume with ChatGPT 2024 (with prompts!)</p>
+                <span>20K views • 6 months ago</span>
+            </div>
+        </div>
+    </div>
+
+      <!-- //section for on steps with vidweo // -->
+    
+<script>
+
+function handleStepChange(step) {
+  const allStepsContent = document.querySelectorAll('.steps-img');
+  
+  // Hide all step contents
+  allStepsContent.forEach((content) => content.classList.remove('active'));
+
+  // Show the corresponding step content
+  const currentStepContent = document.querySelector(`.step-0${step}-img`);
+  if (currentStepContent) {
+    currentStepContent.classList.add('active');
+  }
+}
+
+</script>   
+   
+
+
+      
+
+      <!-- card sectoion -->
+
+      <div class="cards-containers">
+        <div class="cards card-01">
+          <div class="numbers">01</div>
+          <img src="Images/icons8-single-page-mode-100.png" alt="Icon 1">
+          <h3>Pick a template</h3>
+          <p>With a good resume template, you don't need to worry about formatting details.</p>
+          <a href="#" class="buttons blues"> professional template </a>
+        </div>
+      
+        <div class="cards card-02">
+          <div class="numbers">02</div>
+          <img src="Images/icons8-pen-64.png" alt="Icon 2">
+          <h3>Customize section</h3>
+          <p>Fill in your personal information and work experience.</p>
+          <a href="#" class="buttons oranges">Learn to write a resume </a>
+        </div>
+      
+        <div class="cards card-03">
+          <div class="numbers">03</div>
+          <img src="Images/icons8-briefcase-48.png" alt="Icon 3">
+          <h3>Emphasize your skills</h3>
+          <p>Pick skills that align with the job advertisement and tailor your resume.</p>
+          <a href="#" class="buttons greens">Pick skills for resume </a>
+        </div>
+      
+        <div class="cards card-04">
+          <div class="numbers">04</div>
+          <img src="Images/icons8-arrow-64.png" alt="Icon 4">
+          <h3>Export and Apply</h3>
+          <p>Export your resume in multiple formats and apply with confidence.</p>
+          <a href="#" class="buttons blues">Download your resume</a>
+        </div>
+      </div>
+      
+
+
+
+
+    
+    
+        
+    
+    
+    
+
+    
+
+   
+
+    <script>
+
+        let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+})
+
+    // Load the IFrame Player API code asynchronously
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var players = {};
+
+    // This function creates a player for each iframe
+    function onYouTubeIframeAPIReady() {
+        var videoIds = ['video1', 'video2', 'video3', 'video4'];
+        
+        videoIds.forEach(function(id) {
+            players[id] = new YT.Player(id, {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        });
+    }
+
+    function onPlayerReady(event) {
+        // Play video on mouse enter
+        var videoElement = event.target.getIframe().parentNode;
+
+        videoElement.addEventListener('mouseenter', function() {
+            event.target.playVideo();
+        });
+
+        // Pause video on mouse leave
+        videoElement.addEventListener('mouseleave', function() {
+            event.target.pauseVideo();
+        });
+    }
+
+
+    
+</script>
+
+
+
+</body>
+</html>
