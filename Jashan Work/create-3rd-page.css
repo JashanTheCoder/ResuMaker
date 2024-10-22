@@ -318,3 +318,61 @@ label {
 		font-size: 1rem;
 	}
 }
+
+.preloader-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* Full viewport height */
+	background-color: rgba(
+		247,
+		247,
+		247,
+		0.8
+	); /* Slightly transparent background */
+}
+
+.preloader {
+	text-align: center;
+	position: relative;
+	margin-top: 200px;
+}
+
+.hidden {
+	display: none;
+}
+.preloader-content {
+	display: none;
+}
+
+.preloader-content.active {
+	display: block;
+}
+
+.preloader-image {
+	width: 100px; /* Adjust size as needed */
+	border-radius: 50%; /* Optional: To make the image circular */
+}
+
+.highlight {
+	color: #ff5722; /* Change to your desired highlight color */
+}
+
+.progress-bar {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20%;
+	height: 5px;
+	background-color: #e0e0e0;
+	border-radius: 3px;
+}
+
+.progress {
+	height: 100%;
+	width: 0;
+	background-color: #ff5722; /* Same color as highlight */
+	border-radius: 3px;
+	transition: width 0.2s ease;
+}

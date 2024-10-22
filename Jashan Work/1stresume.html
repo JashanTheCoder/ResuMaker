@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./1.stresume.css" />
+		<title>Resume Builder</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="form-container">
+				<h2>Update Your Resume</h2>
+				<div class="personal">
+					<div class="section">
+						<h3>Personal Details</h3>
+						<label for="input-name">Name:</label>
+						<input type="text" id="input-name" placeholder="Enter your name" />
+
+						<label for="input-title">Title:</label>
+						<input
+							type="text"
+							id="input-title"
+							placeholder="Write your detailed role"
+						/>
+
+						<div class="contact-container">
+							<label for="input-contact">Contact Info:</label>
+							<div class="phone-number-container">
+								<select id="country-code" style="width: 70px">
+									<option value="+1">+1 (US)</option>
+									<option value="+91">+91 (India)</option>
+									<option value="+44">+44 (UK)</option>
+									<option value="+61">+61 (Australia)</option>
+									<option value="+81">+81 (Japan)</option>
+									<option value="+49">+49 (Germany)</option>
+									<option value="+33">+33 (France)</option>
+								</select>
+								<input
+									type="number"
+									id="input-contact"
+									placeholder="Phone number"
+									style="flex: 1; margin-left: 10px"
+								/>
+							</div>
+							<input type="text" id="input-email" placeholder="Email" />
+							<input type="text" id="input-linkedin" placeholder="LinkedIn" />
+						</div>
+						<button onclick="updatePersonalDetails()">Update</button>
+					</div>
+				</div>
+
+				<!-- <div class="section">
+					<h3>Summary</h3>
+					<textarea
+						id="input-summary"
+						placeholder="Enter your summary here..."
+					></textarea>
+					<button onclick="updateSummary()">Update</button>
+				</div> -->
+
+				<div class="section">
+					<h3>Summary</h3>
+					<div class="toolbar">
+						<button onclick="formatText('bold')">B</button>
+						<button onclick="formatText('italic')">I</button>
+						<button onclick="formatText('justifyLeft')">Left</button>
+						<button onclick="formatText('justifyCenter')">Center</button>
+						<button onclick="formatText('justifyRight')">Right</button>
+						<button onclick="formatText('justifyFull')">Justify</button>
+						<button onclick="clearFormatting()">Clear Formatting</button>
+					</div>
+					<div
+						id="input-summary"
+						contenteditable="true"
+						class="editor"
+						placeholder="Enter your summary here..."
+					></div>
+					<button onclick="updateSummary()">Update</button>
+				</div>
+
+				<div class="section">
+					<h3>Experience</h3>
+					<div class="toolbar">
+						<button onclick="formatText('bold')">B</button>
+						<button onclick="formatText('italic')">I</button>
+						<button onclick="formatText('justifyLeft')">Left</button>
+						<button onclick="formatText('justifyCenter')">Center</button>
+						<button onclick="formatText('justifyRight')">Right</button>
+						<button onclick="formatText('justifyFull')">Justify</button>
+						<button onclick="clearFormatting()">Clear Formatting</button>
+					</div>
+					<div
+						id="input-experience"
+						contenteditable="true"
+						class="editor"
+						placeholder="Enter your experience here..."
+					></div>
+					<!-- <textarea
+						id="input-experience"
+						placeholder="Enter your experience here..."
+					></textarea> -->
+					<button onclick="updateExperience()">Update</button>
+				</div>
+
+				<div class="section">
+					<h3>Education</h3>
+
+					<div class="toolbar">
+						<button onclick="formatText('bold')">B</button>
+						<button onclick="formatText('italic')">I</button>
+						<button onclick="formatText('justifyLeft')">Left</button>
+						<button onclick="formatText('justifyCenter')">Center</button>
+						<button onclick="formatText('justifyRight')">Right</button>
+						<button onclick="formatText('justifyFull')">Justify</button>
+						<button onclick="clearFormatting()">Clear Formatting</button>
+					</div>
+
+					<div
+						id="input-education"
+						contenteditable="true"
+						class="editor"
+						placeholder="Enter your education here..."
+					></div>
+
+					<button onclick="updateEducation()">Update</button>
+
+					<!-- Section to display the updated education -->
+				</div>
+
+				<div class="section">
+					<h3>Skills</h3>
+					<textarea
+						id="input-skills"
+						placeholder="Enter your skills here..."
+					></textarea>
+					<button onclick="updateSkills()">Update</button>
+				</div>
+			</div>
+
+			<div class="resume-container" id="resume-container">
+				<!-- Resume Content Here -->
+				<div id="header">
+					<div id="profile-picture">
+						<img
+							src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1728172800&semt=ais_hybrid"
+							alt="Profile Picture"
+						/>
+					</div>
+					<div id="personal-details">
+						<h1 id="name">Bhupinder Jogi</h1>
+						<h2 id="title">
+							Software Engineer | Cloud Solutions | OS Development
+						</h2>
+						<div id="contact-info">
+							<p id="contact-info-text">+1-(234)-555-1234</p>
+							<p id="email-text">help@enhancv.com</p>
+							<p id="linkedin-text">linkedin.com</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Summary Section -->
+				<div id="summary">
+					<h3>SUMMARY</h3>
+					<p>
+						With over 9 years of experience in software engineering, I bring to
+						the table a deep understanding of cloud computing, operating
+						systems, and data structures...
+					</p>
+				</div>
+
+				<!-- Experience Section -->
+				<div id="experience">
+					<h3>EXPERIENCE</h3>
+					<div id="experience-google">
+						<h4>Senior Software Engineer</h4>
+
+						<p>
+							<strong>Google</strong> | 03/2019 - Present | Mountain View, CA
+						</p>
+						<ul>
+							<li>
+								Led a 5-person team on a machine learning project to improve
+								search algorithms...
+							</li>
+							<!-- Other experience items -->
+						</ul>
+					</div>
+					<!-- Additional experience entries -->
+				</div>
+
+				<!-- Education Section -->
+				<div id="education">
+					<h3>EDUCATION</h3>
+					<div id="education-stanford">
+						<p><strong>Master of Science in Computer Science</strong></p>
+						<p>Stanford University | 01/2012 - 01/2013 | Stanford, CA</p>
+						<div id="education">
+							<p>Your education will appear here...</p>
+						</div>
+					</div>
+					<!-- Additional education entries -->
+				</div>
+
+				<!-- Additional sections... -->
+			</div>
+		</div>
+		<button onclick="previewResume()">Preview Resume</button>
+		<button onclick="downloadResume()">Download Resume</button>
+
+		<script src="./1stresume.js"></script>
+	</body>
+</html>
