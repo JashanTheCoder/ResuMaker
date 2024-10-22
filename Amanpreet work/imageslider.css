@@ -19,9 +19,10 @@ body{
 ); */
 }
 
+
 .container{
   position: relative;
-  margin-top: 350px;
+  margin-top: 150px;
   left: 40%;
   transform: translate(-50%, -50%);
   width: 1000px;
@@ -162,7 +163,7 @@ body{
 .containers {
   background: white;
   padding: 30px;
-  position:absolute;
+  position:re;
   text-align: center;
   width: 1500px;
   margin-top: 500px;
@@ -226,7 +227,7 @@ h1 {
 .containerss {
   background: white;
   padding: 30px;
-  position:absolute;
+  /* position:absolute; */
   text-align: center;
   width: 1500px;
   margin-top: 1000px;
@@ -291,7 +292,7 @@ h1 {
 .containersss{
   background: white;
   padding: 30px;
-  position:absolute;
+  /* position:absolute; */
   text-align: center;
   width: 1500px;
   margin-top: 1500px;
@@ -351,10 +352,17 @@ h1 {
   z-index: -1; /* Behind the arrow */
 }
 
+
+
+
+
+/* ///////////////////////////////////////////css of youtube video started ////////////////////////////////////////////// */
+
+
 .youtube-section {
   padding: 20px;
-  position: absolute;
-  margin-top: 400px;
+  /* position: absolute; */
+  /* margin-top: 400px; */
 
   border-radius: 10px;
  
@@ -407,18 +415,18 @@ h1 {
 
 /* ///card hover effect  */
 
+/* Container Styles */
 .cards-containers {
-position: absolute; 
-top: 4590px;
 display: flex;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-justify-content: space-between;
 flex-wrap: wrap;
-gap: 60px;
-margin: 100px;
-max-width: 1500px;
+justify-content: center;
+gap: 40px;  /* Space between cards */
+padding: 40px 20px;
+max-width: 1200px;
+margin: 0 auto; /* Center the container */
 }
 
+/* Card Styles */
 .cards {
 background: white;
 border-radius: 10px;
@@ -426,7 +434,6 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 padding: 20px;
 width: 250px;
 text-align: center;
-position: relative;
 transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -435,13 +442,12 @@ transform: translateY(-10px);
 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Numbers Styling */
 .numbers {
 font-size: 50px;
 color: #E0E0E0;
 font-weight: bold;
-position: absolute;
-top: -30px;
-left: 20px;
+margin-bottom: 15px;
 transition: color 0.3s ease;
 }
 
@@ -461,6 +467,7 @@ color: #555;
 margin-bottom: 20px;
 }
 
+/* Button Styles */
 .buttons {
 display: inline-block;
 padding: 10px 15px;
@@ -487,81 +494,70 @@ background-color: #28a745;
 margin-left: 10px;
 }
 
-/* Hover effects specific to each card */
+/* Hover effects for each card */
 .card-01:hover .numbers {
-color: #007bff; /* Blue hover for card 1 */
+color: #007bff;
 }
 
 .card-02:hover .numbers {
-color: #f77f00; /* Orange hover for card 2 */
+color: #f77f00;
 }
 
 .card-03:hover .numbers {
-color: #28a745; /* Green hover for card 3 */
+color: #28a745;
 }
 
 .card-04:hover .numbers {
-color: #007bff; /* Blue hover for card 4 */
+color: #007bff;
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
 .cards-containers {
-  justify-content: center;
-  gap: 40px;
-  margin: 50px;
-}
-
-.cards {
-  width: 220px; /* Adjust card size */
-}
-
-.numbers {
-  font-size: 40px;
-  top: -20px;
+    gap: 30px; /* Reduce gap on medium screens */
+    padding: 30px;
 }
 }
 
 @media screen and (max-width: 768px) {
 .cards-containers {
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  margin: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adjust spacing on smaller screens */
 }
 
 .cards {
-  width: 100%; /* Make the cards full-width */
-  max-width: 320px;
+    width: 100%; /* Full-width for smaller screens */
+    max-width: 320px;
 }
 
 .numbers {
-  font-size: 35px;
+    font-size: 40px;
 }
 }
 
 @media screen and (max-width: 480px) {
 .cards {
-  width: 100%; /* Full-width on small screens */
-  max-width: 280px;
-  padding: 15px;
+    width: 100%;
+    max-width: 280px;
+    padding: 15px;
 }
 
 .numbers {
-  font-size: 30px;
+    font-size: 35px;
 }
 
 .buttons {
-  font-size: 12px;
-  padding: 8px 12px;
+    font-size: 12px;
+    padding: 8px 12px;
 }
 
 .cards h3 {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .cards p {
-  font-size: 12px;
+    font-size: 12px;
 }
 }
 
@@ -569,153 +565,57 @@ color: #007bff; /* Blue hover for card 4 */
 /*   
 teemplates porvinging section */
 
+/* Wrapper Styling */
 .resume-content-wrapper {
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 1000px;
-  height: 500px;
-  margin: 50px 0;
-  background-color: white;
-  border-radius: 10px;
-  padding: 40px;
-  margin-left: 300px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-wrap: wrap; /* Allow wrapping on smaller screens */
+justify-content: space-between;
+align-items: flex-start;
+width: 80%;
+max-width: 1200px; /* Limit the width for large screens */
+margin: 50px auto; /* Center the wrapper */
+background-color: white;
+border-radius: 10px;
+padding: 40px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Text Section Styling */
 .resume-text-section {
-  max-width: 50%;
-}
-
-.resume-tags-section {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  max-width: 45%;
+flex: 1; /* Allow flexible resizing */
+min-width: 300px; /* Prevent shrinking too small */
+max-width: 50%; /* Control max width */
+margin-right: 20px;
 }
 
 .resume-heading-text {
-  font-size: 42px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
+font-size: 2rem; /* Adjust based on screen size */
+font-weight: bold;
+color: #333;
+margin-bottom: 20px;
 }
 
 .resume-subtext {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 20px;
-  line-height: 1.5;
+font-size: 1rem;
+color: #666;
+margin-bottom: 20px;
+line-height: 1.5;
 }
 
 .career-link {
-  color: #FF6633;
-  text-decoration: none;
+color: #FF6633;
+text-decoration: none;
 }
 
-.view-link {
-  color: #FF6633;
-  text-decoration: none;
+/* Tag Section Styling */
+.resume-tags-section {
+flex: 1; /* Allow flexible resizing */
+min-width: 300px; /* Prevent shrinking too much */
 }
-
-.resume-tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.resume-tag {
-  background-color: #F5F5F5;
-  border-radius: 20px;
-  padding: 10px 15px;
-  margin: 8px;
-  font-size: 14px;
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* Specific Colors for Tags */
-.acting-tag {
-  border-color: #3399FF;
-  color: #3399FF;
-}
-
-.admin-tag {
-  border-color: #FF6633;
-  color: #FF6633;
-}
-
-.architecture-tag {
-  border-color: #33CC66;
-  color: #33CC66;
-}
-
-.customer-service-tag {
-  border-color: #CC66FF;
-  color: #CC66FF;
-}
-
-.it-tag {
-  border-color: #FFCC33;
-  color: #FFCC33;
-}
-
-.design-tag {
-  border-color: #FFCC33;
-  color: #FFCC33;
-}
-
-.project-manager-tag {
-  border-color: #FF6633;
-  color: #FF6633;
-}
-
-.marketing-tag {
-  border-color: #33CC66;
-  color: #33CC66;
-}
-
-.nursing-tag {
-  border-color: #FF6699;
-  color: #FF6699;
-}
-
-.teacher-tag {
-  border-color: #9966FF;
-  color: #9966FF;
-}
-
-.high-school-tag {
-  border-color: #FFCC33;
-  color: #FFCC33;
-}
-
-.medical-tag {
-  border-color: #3399FF;
-  color: #3399FF;
-}
-
-.software-tag {
-  border-color: #FF6633;
-  color: #FF6633;
-}
-
-.cashier-tag {
-  border-color: #33CC66;
-  color: #33CC66;
-}
-
-.retail-tag {
-  border-color: #FF6699;
-  color: #FF6699;
-}
-
 
 .resume-tag-list {
 display: flex;
-flex-wrap: wrap;
+flex-wrap: wrap; /* Wrap tags */
 justify-content: flex-end;
 }
 
@@ -725,116 +625,90 @@ border-radius: 20px;
 padding: 10px 15px;
 margin: 8px;
 font-size: 14px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+text-decoration: none; /* Remove underline */
+color: inherit; /* Inherit color from class */
 display: inline-flex;
 align-items: center;
-border: 1px solid rgba(0, 0, 0, 0.1);
-text-decoration: none; /* Remove underline from anchor tags */
-color: inherit; /* Inherit text color */
 transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover effects for all tags */
+/* Hover effect for tags */
 .resume-tag:hover {
 background-color: #FF6633;
 color: white;
 transform: translateY(-2px);
 }
 
-/* Specific Colors for Tags */
-.acting-tag {
-border-color: #3399FF;
-color: #3399FF;
+/* Specific Tag Colors */
+.acting-tag { border-color: #3399FF; color: #3399FF; }
+.admin-tag { border-color: #FF6633; color: #FF6633; }
+.architecture-tag { border-color: #33CC66; color: #33CC66; }
+.customer-service-tag { border-color: #CC66FF; color: #CC66FF; }
+.it-tag { border-color: #FFCC33; color: #FFCC33; }
+.design-tag { border-color: #FFCC33; color: #FFCC33; }
+.project-manager-tag { border-color: #FF6633; color: #FF6633; }
+.marketing-tag { border-color: #33CC66; color: #33CC66; }
+.nursing-tag { border-color: #FF6699; color: #FF6699; }
+.teacher-tag { border-color: #9966FF; color: #9966FF; }
+.high-school-tag { border-color: #FFCC33; color: #FFCC33; }
+.medical-tag { border-color: #3399FF; color: #3399FF; }
+.software-tag { border-color: #FF6633; color: #FF6633; }
+.cashier-tag { border-color: #33CC66; color: #33CC66; }
+.retail-tag { border-color: #FF6699; color: #FF6699; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+.resume-content-wrapper {
+    flex-direction: column; /* Stack content vertically */
+    padding: 20px;
 }
 
-.admin-tag {
-border-color: #FF6633;
-color: #FF6633;
+.resume-text-section,
+.resume-tags-section {
+    max-width: 100%; /* Full width */
+    margin-right: 0;
 }
 
-.architecture-tag {
-border-color: #33CC66;
-color: #33CC66;
+.resume-heading-text {
+    font-size: 1.75rem;
 }
 
-.customer-service-tag {
-border-color: #CC66FF;
-color: #CC66FF;
+.resume-subtext {
+    font-size: 0.9rem;
+}
 }
 
-.it-tag {
-border-color: #FFCC33;
-color: #FFCC33;
+@media (max-width: 768px) {
+.resume-heading-text {
+    font-size: 1.5rem;
 }
 
-.design-tag {
-border-color: #FFCC33;
-color: #FFCC33;
+.resume-subtext {
+    font-size: 0.85rem;
 }
 
-.project-manager-tag {
-border-color: #FF6633;
-color: #FF6633;
+.resume-tag {
+    font-size: 12px; /* Smaller font size for tags */
+    padding: 8px 12px;
+}
 }
 
-.marketing-tag {
-border-color: #33CC66;
-color: #33CC66;
+@media (max-width: 480px) {
+.resume-content-wrapper {
+    padding: 10px;
 }
 
-.nursing-tag {
-border-color: #FF6699;
-color: #FF6699;
+.resume-heading-text {
+    font-size: 1.25rem;
 }
 
-.teacher-tag {
-border-color: #9966FF;
-color: #9966FF;
+.resume-tag {
+    font-size: 10px;
+    padding: 6px 10px;
+}
 }
 
-.high-school-tag {
-border-color: #FFCC33;
-color: #FFCC33;
-}
-
-.medical-tag {
-border-color: #3399FF;
-color: #3399FF;
-}
-
-.software-tag {
-border-color: #FF6633;
-color: #FF6633;
-}
-
-.cashier-tag {
-border-color: #33CC66;
-color: #33CC66;
-}
-
-.retail-tag {
-border-color: #FF6699;
-color: #FF6699;
-}
-
-/* Specific hover effects for each tag */
-.acting-tag:hover,
-.admin-tag:hover,
-.architecture-tag:hover,
-.customer-service-tag:hover,
-.it-tag:hover,
-.design-tag:hover,
-.project-manager-tag:hover,
-.marketing-tag:hover,
-.nursing-tag:hover,
-.teacher-tag:hover,
-.high-school-tag:hover,
-.medical-tag:hover,
-.software-tag:hover,
-.cashier-tag:hover,
-.retail-tag:hover {
-background-color: #FF6633; /* Same hover background for all */
-color: white; /* White text on hover */
-}
 
 
 /* //////cards css of 8 cards at 2nd section  */
@@ -896,38 +770,114 @@ color: #555;
 
 /* ///youyuube video captions above  */
 
-.video-wrapper {
-
-padding: 40px; 
-text-align: center; 
+/* Wrapper Styling */
+/* Wrapper Styling */
+.youtube-section {
+padding: 40px;
 border-radius: 10px;
+margin: 0 auto;
+/* max-width: 1200px; Limits max width on larger screens */
+}
 
-max-width: 600px; 
-margin: 0 auto; 
+.video-wrapper {
+text-align: center;
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
 }
 
 .video-subtitle {
 font-size: 20px;
-color: #999; 
+color: #999;
 margin-bottom: 10px;
 }
 
 .video-title {
-font-size: 32px; 
-font-weight: bold; 
+font-size: 32px;
+font-weight: bold;
 margin-bottom: 20px;
-color: #333; 
+color: #333;
 }
 
 .video-description {
-font-size: 16px; 
-color: #555; 
-line-height: 1.5; 
-width: 900px; 
-text-align: center;
-margin: 0 ;
-margin-left: -190px;
+font-size: 16px;
+color: #555;
+line-height: 1.6;
+margin: 0 auto;
+max-width: 700px;
 }
+
+/* YouTube Heading */
+.youtube-heading {
+font-size: 24px;
+text-align: center;
+margin: 30px 0;
+}
+
+/* Video Container Styling */
+.video-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+gap: 20px; /* Space between videos */
+margin-top: 20px;
+}
+
+/* Individual Video Styling */
+.video {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.video iframe {
+width: 100%; /* Ensures video takes full column width */
+aspect-ratio: 16 / 9; /* Maintains aspect ratio */
+border-radius: 10px;
+margin-bottom: 10px;
+}
+
+.video p {
+font-size: 14px;
+color: #333;
+margin: 5px 0;
+}
+
+.video span {
+font-size: 12px;
+color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+.video-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+}
+
+.video-title {
+    font-size: 28px;
+}
+
+.video-description {
+    font-size: 14px;
+}
+}
+
+@media (max-width: 768px) {
+.video-container {
+    grid-template-columns: 1fr; /* Single column on small screens */
+}
+
+.video iframe {
+    width: 100%; /* Full width on mobile */
+    height: auto;
+}
+
+.video {
+    max-width: 90%; /* Center the video block */
+    margin: 0 auto;
+}
+}
+
 
 /************************************************************************* Footer  *****************************************************************/
 .footer-waves {
