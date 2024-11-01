@@ -10,6 +10,174 @@
     <a href="https://lordicon.com/"></a>
     <style>
 
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	background: linear-gradient(
+		90deg,
+		rgba(255, 240, 224, 0.5) 0%,
+		rgba(204, 218, 255, 0.5) 100%,
+		rgba(204, 215, 255, 0.3) 50%
+	);
+	box-shadow: none;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.header-scroll {
+	box-shadow: 0 4px 8px rgba(255, 230, 204, 0.5);
+	background: #eae1e1;
+}
+
+.logo {
+	font-size: 1.8em;
+	font-weight: bold;
+	padding-left: 5.5rem;
+	display: flex;
+	align-items: center;
+}
+.logo a {
+	text-decoration: none;
+	color: #000;
+}
+.logo-span {
+	display: flex;
+	align-items: center;
+}
+.navbar-links {
+	display: flex;
+	align-items: center;
+	padding-right: 100px;
+}
+
+.navbar-links a {
+	padding: 5px;
+	margin-left: 20px;
+	text-decoration: none;
+	font-weight: 600;
+	color: black;
+	position: relative;
+}
+
+.navbar-links a:hover {
+	color: #007bff;
+	cursor: pointer;
+}
+
+.hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 25px;
+}
+
+.hamburger div {
+	width: 25px;
+	height: 3px;
+	background-color: #000;
+	margin: 4px 0;
+	transition: 0.4s;
+}
+
+#menu-toggle {
+	display: none;
+}
+
+#menu-toggle:checked + .hamburger + .navbar-links {
+	display: none;
+}
+
+#menu-toggle:checked + .hamburger + .navbar-links + .mobile-menu {
+	display: flex;
+}
+
+.mobile-menu {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	background: #eae1e1;
+	padding: 10px;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.mobile-menu a {
+	padding: 10px;
+	text-decoration: none;
+	font-weight: 600;
+	color: black;
+}
+
+@media (max-width: 768px) {
+	nav {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0px;
+	}
+
+	.logo {
+		padding-left: 20px;
+	}
+
+	.navbar-links {
+		padding-right: 20px;
+	}
+
+	.navbar-links a {
+		margin-left: 10px;
+	}
+	.navbar-links {
+		display: none;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	.logo {
+		padding-left: 20px;
+		display: flex;
+		align-items: center;
+	}
+
+	.logo a {
+		display: flex;
+		justify-content: flex-start;
+		width: 100%;
+	}
+
+	.mobile-menu {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		background: #eae1e1;
+		padding: 10px;
+		position: absolute;
+		top: 60px;
+		right: 0;
+		left: 0;
+		z-index: 1000;
+	}
+
+	#menu-toggle:checked + .hamburger + .navbar-links {
+		display: none;
+	}
+
+	#menu-toggle:checked + .hamburger + .navbar-links + .mobile-menu {
+		display: flex;
+	}
+}
       
       .center-container {
         width: 100%;
@@ -167,6 +335,61 @@
     rgba(211, 223, 255, 0.9) 100%,
     rgba(204, 230, 255, 0.299) 50%
 );">
+
+<nav>
+  <div class="logo">
+    <a href="./main-page-biobanao.html">
+      <span class="logo-span">
+        <lord-icon
+          src="https://cdn.lordicon.com/ghhwiltn.json"
+          trigger="hover"
+          stroke="bold"
+          colors="primary:#121331,secondary:#007bff"
+          style="width: 1.1em; height: 1.1em"
+        ></lord-icon>
+        <span
+          style="display: inline-block; text-align: center; width: 100%"
+        >
+          Bio<span style="color: #007bff">बनाओ</span>
+        </span>
+      </span>
+    </a>
+  </div>
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </label>
+  <div class="navbar-links">
+    <a
+      href="file:///C:/Users/DELL/Desktop/resume%20builder/Amanpreet%20work/aboutusextension.html"
+      class="link"
+      >About Us</a
+    >
+    <a
+      href="file:///C:/Users/DELL/Desktop/resume%20builder/Amanpreet%20work/faq.html"
+      class="link"
+      >FA&Qs</a
+    >
+    <a href="./first-resume.html.html" class="link">Templates</a>
+    <a href="./login.html" class="link">Login</a>
+  </div>
+  <div class="mobile-menu">
+    <a
+      href="file:///C:/Users/DELL/Desktop/resume%20builder/Amanpreet%20work/aboutusextension.html"
+      class="link"
+      >About Us</a
+    >
+    <a
+      href="file:///C:/Users/DELL/Desktop/resume%20builder/Amanpreet%20work/faq.html"
+      class="link"
+      >FA&Qs</a
+    >
+    <a href="./first-resume.html.html" class="link">Templates</a>
+    <a href="./login.html" class="link">Login</a>
+  </div>
+</nav>
 
 
 
@@ -357,206 +580,195 @@
 
 
     
-    <div class="resume-content-wrapper">
-        <div class="resume-text-section">
-            <h1 class="resume-heading-text">Look at resume examples for inspiration</h1>
-            <p class="resume-subtext">
-                We have over 400 professional resume examples on our website. Each sample was written and approved by our 
-                <a href="#" class="career-link">team of career experts</a>.
-            </p>
-        </div>
-    
-        <div class="resume-tags-section">
-            <div class="resume-tag-list">
-                <a href="acting.html" class="resume-tag acting-tag">🎭 Acting</a>
-                <a href="administrative.html" class="resume-tag admin-tag">🗂️ Administrative Assistant</a>
-                <a href="architecture.html" class="resume-tag architecture-tag">🏛️ Architecture</a>
-                <a href="customerservice.html" class="resume-tag customer-service-tag">🎧 Customer Service</a>
-                <a href="itdepartment.html" class="resume-tag it-tag">💻 IT</a>
-                <a href="graphicdesign.html" class="resume-tag design-tag">🎨 Graphic Design</a>
-                <a href="projectmanager.html" class="resume-tag project-manager-tag">📈 Project Manager</a>
-                <a href="marketing.html" class="resume-tag marketing-tag">📊 Marketing</a>
-                <a href="nursing.html" class="resume-tag nursing-tag">💉 Nursing</a>
-                <a href="teacher.html" class="resume-tag teacher-tag">🎓 Teacher</a>
-                <a href="highschool.html" class="resume-tag high-school-tag">🎓 High School</a>
-                <a href="medical-page.html" class="resume-tag medical-tag">🩺 Medical Assistant</a>
-                <a href="software-page.html" class="resume-tag software-tag">💻 Software Engineer</a>
-                <a href="cashier-page.html" class="resume-tag cashier-tag">💵 Cashier</a>
-                <a href="retail-page.html" class="resume-tag retail-tag">🛍️ Retail Sales Associate</a>
-            </div>
-            
+  <div class="resume-content-wrapper">
+    <div class="resume-text-section">
+        <h1 class="resume-heading-text">Look at resume examples for inspiration</h1>
+        <p class="resume-subtext">
+            We have over 400 professional resume examples on our website. Each sample was written and approved by our 
+            <a href="#" class="career-link">team of career experts</a>.
+        </p>
+    </div>
+
+    <div class="resume-tags-section">
+        <div class="resume-tag-list">
+            <a href="/Amanpreet work/acting.html" class="resume-tag acting-tag">🎭 Acting</a>
+            <a href="/Amanpreet work/administrative.html" class="resume-tag admin-tag">🗂️ Administrative Assistant</a>
+            <a href="/Amanpreet work/architecture.html" class="resume-tag architecture-tag">🏛️ Architecture</a>
+            <a href="/Amanpreet work/customerservice.html" class="resume-tag customer-service-tag">🎧 Customer Service</a>
+            <a href="/Amanpreet work/itdepartment.html" class="resume-tag it-tag">💻 IT</a>
+            <a href="/Amanpreet work/graphicdesign.html" class="resume-tag design-tag">🎨 Graphic Design</a>
+            <a href="/Amanpreet work/projectmanager.html" class="resume-tag project-manager-tag">📈 Project Manager</a>
+            <a href="/Amanpreet work/marketing.html" class="resume-tag marketing-tag">📊 Marketing</a>
+            <a href="/Amanpreet work/nursing.html" class="resume-tag nursing-tag">💉 Nursing</a>
+            <a href="/Amanpreet work/teacher.html" class="resume-tag teacher-tag">🎓 Teacher</a>
+            <a href="/Amanpreet work/highschool.html" class="resume-tag high-school-tag">🎓 High School</a>
+            <a href="/Amanpreet work/medical-page.html" class="resume-tag medical-tag">🩺 Medical Assistant</a>
+            <a href="/Amanpreet work/software-page.html" class="resume-tag software-tag">💻 Software Engineer</a>
+            <a href="/Amanpreet work/cashier-page.html" class="resume-tag cashier-tag">💵 Cashier</a>
+            <a href="/Amanpreet work/retail-page.html" class="resume-tag retail-tag">🛍️ Retail Sales Associate</a>
         </div>
     </div>
+</div>
+
     
 </section>
-    <div class="imgslider">
 
-    
-    <div class="container">
 
-        <div class="slide">
+<section style="position: relative; overflow:hidden ; width: 100%; height: 500px; padding: 50px;" >
 
-            
-            <div class="item" style="background-image: url(Images/Basic-Mid-Level-scaled.jpg);">
-                <div class="content">
-                    <div class="name">📝 Basic-Level Template</div>
-                    <div class="des">An ideal resume template for entry-level job seekers.
-                        <ul>
-                            <li>👶 Designed for entry-level professionals.</li>
-                            <li>✨ Simple and clean layout to highlight your skills.</li>
-                            <li>✍️ Easy to customize with your personal information.</li>
-                            
-                        </ul></div>
-                    <button>See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(Images/Information-Technology-IT-Mid-Level-scaled.jpg);">
-                <div class="content">
-                    <div class="name">💻 IT-Sector</div>
-    <div class="des">
-        A resume template tailored for IT professionals.
-        <ul>
-            <li>🔧 Showcases technical skills and certifications effectively.</li>
-            <li>🎨 Modern design with a focus on clarity and organization.</li>
-            <li>📂 Includes sections for projects, technologies used, and work experience.</li>
-        </ul></div>
-                    <button>See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(Images/teacher_template.jpg);">
-                <div class="content">
-                    <div class="name">📚 Teaching</div>
-    <div class="des">
-        A comprehensive resume template tailored for educators.
-        <ul>
-            <li>🏫 Designed to showcase teaching experience and educational background.</li>
-            <li>🎓 Highlights certifications, licenses, and relevant coursework.</li>
-            <li>🌟 Features sections for student achievements and teaching philosophy.</li>
-        </ul>
+
+  <div class="imgslider">
+
+  
+  <div class="container">
+
+      <div class="slide">
+
+          
+          <div class="item" style="background-image: url(Images/Basic-Mid-Level-scaled.jpg);">
+              <div class="content">
+                  <div class="name">📝 Basic-Level Template</div>
+                  <div class="des">An ideal resume template for entry-level job seekers.
+                      <ul>
+                          <li>👶 Designed for entry-level professionals.</li>
+                          <li>✨ Simple and clean layout to highlight your skills.</li>
+                          <li>✍️ Easy to customize with your personal information.</li>
+                          
+                      </ul></div>
+                  <button>See More</button>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(Images/Information-Technology-IT-Mid-Level-scaled.jpg);">
+              <div class="content">
+                  <div class="name">💻 IT-Sector</div>
+  <div class="des">
+      A resume template tailored for IT professionals.
+      <ul>
+          <li>🔧 Showcases technical skills and certifications effectively.</li>
+          <li>🎨 Modern design with a focus on clarity and organization.</li>
+          <li>📂 Includes sections for projects, technologies used, and work experience.</li>
+      </ul></div>
+                  <button>See More</button>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(Images/teacher_template.jpg);">
+              <div class="content">
+                  <div class="name">📚 Teaching</div>
+  <div class="des">
+      A comprehensive resume template tailored for educators.
+      <ul>
+          <li>🏫 Designed to showcase teaching experience and educational background.</li>
+          <li>🎓 Highlights certifications, licenses, and relevant coursework.</li>
+          <li>🌟 Features sections for student achievements and teaching philosophy.</li>
+      </ul>
 </div>
 <button>See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(images/New-Grad-Nursing-Mid-Level-scaled.jpg);">
-                <div class="content">
-                    <div class="name">🏥 Nursing</div>
-                    <div class="des">
-                        A specialized resume template for nursing professionals.
-                        <ul>
-                            <li>💉 Emphasizes clinical experience and nursing certifications.</li>
-                            <li>🩺 Includes sections for patient care experience and technical skills.</li>
-                            <li>📋 Customizable layout to reflect your nursing specialties and achievements.</li>
-                        </ul>
-                    </div>
-                    <button>See More</button>
-                </div>
-            </div>
-            
+              </div>
+          </div>
+          <div class="item" style="background-image: url(images/New-Grad-Nursing-Mid-Level-scaled.jpg);">
+              <div class="content">
+                  <div class="name">🏥 Nursing</div>
+                  <div class="des">
+                      A specialized resume template for nursing professionals.
+                      <ul>
+                          <li>💉 Emphasizes clinical experience and nursing certifications.</li>
+                          <li>🩺 Includes sections for patient care experience and technical skills.</li>
+                          <li>📋 Customizable layout to reflect your nursing specialties and achievements.</li>
+                      </ul>
+                  </div>
+                  <button>See More</button>
+              </div>
+          </div>
+          
 
-            <div class="item" style="background-image: url(Images/Medical-Assistant_template.jpg);">
-                <div class="content">
-                    <div class="name">🩺 Medical Assistant</div>
-    <div class="des">
-        A tailored resume template designed for medical assistants.
-        <ul>
-            <li>🩻 Highlights clinical skills and administrative expertise.</li>
-            <li>👩‍⚕️ Includes sections for patient interaction and office management.</li>
-            <li>📜 Customizable format to showcase relevant certifications and training.</li>
-        </ul></div>
-                    <button>See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(Images/Customer-Service-Representative-Mid-Level-scaled.jpg);">
-                <div class="content">
-                    <div class="name">💼 Customer Services</div>
-                    <div class="des"> A professional resume template designed for customer service roles.
-                        <ul>
-                            <li>🗣️ Showcases communication skills and problem-solving abilities.</li>
-                            <li>🤝 Features sections for experience in customer relations and support.</li>
-                            <li>📑 Flexible layout to highlight key achievements and training.</li>
-                        </ul></div>
-                    <button>See More</button>
-                </div>
-            </div>
+          <div class="item" style="background-image: url(Images/Medical-Assistant_template.jpg);">
+              <div class="content">
+                  <div class="name">🩺 Medical Assistant</div>
+  <div class="des">
+      A tailored resume template designed for medical assistants.
+      <ul>
+          <li>🩻 Highlights clinical skills and administrative expertise.</li>
+          <li>👩‍⚕️ Includes sections for patient interaction and office management.</li>
+          <li>📜 Customizable format to showcase relevant certifications and training.</li>
+      </ul></div>
+                  <button>See More</button>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(Images/Customer-Service-Representative-Mid-Level-scaled.jpg);">
+              <div class="content">
+                  <div class="name">💼 Customer Services</div>
+                  <div class="des"> A professional resume template designed for customer service roles.
+                      <ul>
+                          <li>🗣️ Showcases communication skills and problem-solving abilities.</li>
+                          <li>🤝 Features sections for experience in customer relations and support.</li>
+                          <li>📑 Flexible layout to highlight key achievements and training.</li>
+                      </ul></div>
+                  <button>See More</button>
+              </div>
+          </div>
 
-        </div>
-      
+      </div>
+    
 
-        <div class="button">
-            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+      <div class="button">
+          <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
 
-    </div>
+  </div>
 
 </div>
 
-    <!-- <div class="containers">
-        <h1>Check your resume for grammatical and punctuation errors</h1>
-        <p class="descriptions">A built-in content checker tool helping you stay on top of grammar errors and clichés</p>
-        <ul class="checklists">
-            <li>✅ Wording and readability analysis</li>
-            <li>✅ Eliminate typos and grammatical errors</li>
-            <li>✅ Content suggestions based on your job and experience</li>
-        </ul>
-        <img src="Images/line.webp" style="width: 300px;">
-    </div>
+</section>
+   
+     
+<section>
+  
+</section>
+<div class="youtube-section" style="position: static;">
+  <div class="video-wrapper">
+      <h3 class="video-subtitle">Walkthroughs & Video Shorts</h3>
+      <h1 class="video-title">Watch videos for more resume-writing ideas</h1>
+      <p class="video-description">
+          If you’d rather master the arts of resume writing and formatting through video content, we’ve got you covered. 
+          Learn how to make a resume with no experience, use a resume template, or build your resume from the beginning 
+          with our resume builder in short but comprehensive YouTube videos and TikToks.
+      </p>
+  </div>
 
-    <div class="containerss">
-        <h1>Resume tailoring based on the job you’re applying for</h1>
-        <p class="descriptionss">Quickly ensure that your resume covers key skills and experiences by pasting the job ad you’re applying for</p>
-        <ul class="checklistss">
-            <li>✅ Skills and experience section analysis</li>
-            <li>✅ Actionable checklist of what else to add to your resume</li>
-            <li>✅ Instant comparison between your resume and the job posting</li>
-        </ul>
-        <img src="Images/lineup.webp" style="width: 300px;">
-    </div>
+  <h2 class="youtube-heading">YouTube</h2>
 
-    <div class="containersss">
-        <h1>20+ Professionally designed resume sections</h1>
-        <p class="descriptionsss">Express your professional history without limitations or worry about how your resume looks</p>
-        <ul class="checklistsss">
-                <li>✅ Tailored feedback on your skills and experiences</li>
-                <li>✅ Comprehensive checklist for enhancing your resume</li>
-                <li>✅ Quick comparison between your resume and desired job criteria</li>
-            </ul>
-        
-    </div> -->
+  <div class="video-container">
+      <div class="video">
+          <iframe id="video1" src="https://www.youtube.com/embed/QJAVtmSEwz4" 
+                  frameborder="0" allowfullscreen></iframe>
+          <p>How to Make a Resume in 2024 (with free resume templates!)</p>
+          <span>5.5K views • 5 months ago</span>
+      </div>
 
-    <div class="youtube-section">
+      <div class="video">
+          <iframe id="video2" src="https://www.youtube.com/embed/V2VXaFPsMY?enablejsapi=1" 
+                  frameborder="0" allowfullscreen></iframe>
+          <p>240+ Free Resume Template Downloads (Google Docs & MS...)</p>
+          <span>100K views • 2 years ago</span>
+      </div>
 
-        <div class="video-wrapper">
-            <h3 class="video-subtitle">Walkthroughs & Video Shorts</h3>
-            <h1 class="video-title">Watch videos for more resume-writing ideas</h1>
-            <p class="video-description">
-                If you’d rather master the arts of resume writing and formatting through video content, we’ve got you covered. Learn how to make a resume with no experience, use a resume template, or build your resume from the beginning with our resume builder in short but comprehensive YouTube videos and TikToks.
-            </p>
-        </div>
-        <h2>YouTube</h2>
-        <div class="video-container">
-            <div class="video">
-                <iframe id="video1" src="https://www.youtube.com/watch?v=QJAVtmSEwz4" frameborder="0" allowfullscreen></iframe>
-                <p>How to Make a Resume in 2024 (with free resume templates!)</p>
-                <span>5.5K views • 5 months ago</span>
-            </div>
-            <div class="video">
-                <iframe id="video2" src="https://www.youtube.com/embed/V2VXaFPsMY?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                <p>240+ Free Resume Template Downloads (Google Docs & MS...)</p>
-                <span>100K views • 2 years ago</span>
-            </div>
-            <div class="video">
-                <iframe id="video3" src="https://www.youtube.com/embed/LXSfa8eti9Q?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                <p>Make Your Resume with Resume Genius | Builder Walkthrough</p>
-                <span>6.7K views • 1 year ago</span>
-            </div>
-            <div class="video">
-                <iframe id="video4" src="https://www.youtube.com/embed/Lk5ju74lG7Y?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                <p>How to Write a Resume with ChatGPT 2024 (with prompts!)</p>
-                <span>20K views • 6 months ago</span>
-            </div>
-        </div>
-    </div>
+      <div class="video">
+          <iframe id="video3" src="https://www.youtube.com/embed/LXSfa8eti9Q?enablejsapi=1" 
+                  frameborder="0" allowfullscreen></iframe>
+          <p>Make Your Resume with Resume Genius | Builder Walkthrough</p>
+          <span>6.7K views • 1 year ago</span>
+      </div>
+
+      <div class="video">
+          <iframe id="video4" src="https://www.youtube.com/embed/Lk5ju74lG7Y?enablejsapi=1" 
+                  frameborder="0" allowfullscreen></iframe>
+          <p>How to Write a Resume with ChatGPT 2024 (with prompts!)</p>
+          <span>20K views • 6 months ago</span>
+      </div>
+  </div>
+</div>
+
 
       <!-- //section for on steps with vidweo // -->
     
@@ -617,19 +829,6 @@ function handleStepChange(step) {
         </div>
       </div>
       
-
-
-
-
-    
-    
-        
-    
-    
-    
-
-    
-
    
 
     <script>
@@ -685,6 +884,101 @@ prev.addEventListener('click', function(){
 
     
 </script>
+
+ <!--**************************************************************************************** footer  ********************************************************-->
+<!-- 
+ <section style="position: absolute; margin-top: 1600px;"> -->
+
+ <div class="footer-waves">
+  <!-- Waves SVG -->
+  <svg
+    class="waves"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28"
+    preserveAspectRatio="none"
+    shape-rendering="auto"
+  >
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      />
+    </defs>
+    <g class="parallax">
+      <use
+        xlink:href="#gentle-wave"
+        x="48"
+        y="0"
+        fill="rgba(255,255,255,0.7)"
+      />
+      <use
+        xlink:href="#gentle-wave"
+        x="48"
+        y="3"
+        fill="rgba(255,255,255,0.5)"
+      />
+      <use
+        xlink:href="#gentle-wave"
+        x="48"
+        y="5"
+        fill="rgba(255,255,255,0.3)"
+      />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+  </svg>
+
+  <!-- Footer Content -->
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <a href="./meet-our-team.html"><h3>BIO<span>BANAO</span></h3> </a>
+      
+      <p class="footer-links">
+        <a href="#">Home</a> | <a href="#">About</a> |
+        <a href="#">Contact</a> |
+        <a href="#">Fa&Q</a>
+      </p>
+      <p class="footer-company-name">
+        Copyright © 2024 <strong>BIO-BANAO</strong> All rights reserved
+      </p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Ambala, </span> Haryana</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91 7988734559</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p>
+          <a href="mailto:thisissinghamanpreet@gmail.com"></a>
+            <strong style="color: black;"> biobanao@gmail.com</strong></a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About the company</span>
+        <strong>Bio-Banao</strong> is a Resume Maker website where you can
+        expect every type of resume template in which you can fill your information and get your resume in minutes.
+      </p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+<!-- 
+</section> -->
 
 
 

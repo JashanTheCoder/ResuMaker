@@ -11,28 +11,70 @@
     <link rel="stylesheet" type="text/css" href="faq.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-           
-            <a href="./index.html"
-                ><span class="logo-span">
-                    <script src="https://cdn.lordicon.com/lordicon.js"></script>
-<lord-icon
-    src="https://cdn.lordicon.com/ghhwiltn.json"
-    trigger="hover"
-    stroke="bold"
-    colors="primary:#121331,secondary:#007bff"
-    style="width:1.1em;height:1.1em">
-</lord-icon>
-                    Bio<span style="color: #007bff">बनाओ</span>
-                </span>
-            </a>
-        </div>
-        <div class="navbar-links">
-            <a href="#" class="link">Contact Us</a>
-            <a href="#" class="link">Login</a>
-        </div>
-    </nav> 
+   
+
+  <section>
+    <section class="chat-section">
+      <div class="chatbox hidden" id="chatbox">
+          <div class="chatbox-header">💬 Online </div>
+          <div class="chatbox-content" id="chatboxContent"></div>
+          <div class="chatbox-input">
+              <input type="text" id="chatInput" placeholder="Type your message...">
+              <button onclick="sendMessage()">Send</button>
+          </div>
+      </div>
+
+      <!-- Floating chat bubble to open the chat -->
+      <div class="chat-bubble" onclick="toggleChatbox()">
+          💬
+      </div>
+
+    
+  </section>
+
+  <script>
+      // Toggle chatbox visibility
+      function toggleChatbox() {
+          const chatbox = document.getElementById('chatbox');
+          if (chatbox.classList.contains('hidden')) {
+              chatbox.classList.remove('hidden');
+              chatbox.style.transform = 'scale(1)'; // Animate opening
+          } else {
+              chatbox.style.transform = 'scale(0)'; // Animate closing
+              setTimeout(() => chatbox.classList.add('hidden'), 300);
+          }
+      }
+
+      // Send message functionality
+      function sendMessage() {
+          const input = document.getElementById("chatInput");
+          const message = input.value.trim();
+          if (message === "") return;
+
+          const chatboxContent = document.getElementById("chatboxContent");
+
+          // Add user's message
+          const userMessage = document.createElement("div");
+          userMessage.className = "message user";
+          userMessage.innerHTML = `<div class="message-content">${message}</div>`;
+          chatboxContent.appendChild(userMessage);
+
+          input.value = ""; // Clear input field
+
+          // Simulate bot's response
+          setTimeout(() => {
+              const botMessage = document.createElement("div");
+              botMessage.className = "message bot";
+              botMessage.innerHTML = `<div class="message-content">Thanks for reaching out! How can I assist you today?</div>`;
+              chatboxContent.appendChild(botMessage);
+
+              chatboxContent.scrollTop = chatboxContent.scrollHeight; // Auto-scroll
+          }, 1000);
+      }
+
+      
+  </script>
+  </section>
 
       
     <section class="frontfaq">
@@ -46,7 +88,7 @@
       </div>
 
       <div class="imgfaq">
-        <img src="https://images.ctfassets.net/14q5t4r3zqb4/5m69tcjvhekmhMJuPBP0v5/e2e8960444eb53d396c70be74c138ca0/547db9513cf87ea8449e855fb500226c.png?fm=webp&q=80&w=1919" >
+        <img src="https://images.ctfassets.net/14q5t4r3zqb4/5m69tcjvhekmhMJuPBP0v5/e2e8960444eb53d396c70be74c138ca0/547db9513cf87ea8449e855fb500226c.png?fm=webp&q=80&w=1919" alt="person">  
       </div>
       
     </section>
@@ -204,22 +246,95 @@
 <script src="style.js"></script>
 
 
-<footer>
-    <div class="footerContainer">
-        <div class="socialIcons">
-            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/?mx=2" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.google.com/" target="_blank" ><i class="fa-brands fa-google-plus"></i></a>
-            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-        
-        
+<!--**************************************************************************************** footer  ********************************************************-->
+<div class="footer-waves">
+  <!-- Waves SVG -->
+  <svg
+    class="waves"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28"
+    preserveAspectRatio="none"
+    shape-rendering="auto"
+  >
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      />
+    </defs>
+    <g class="parallax">
+      <use
+        xlink:href="#gentle-wave"
+        x="48"
+        y="0"
+        fill="rgba(255,255,255,0.7)"
+      />
+      <use
+        xlink:href="#gentle-wave"
+        x="48"
+        y="3"
+        fill="rgba(255,255,255,0.5)"
+      />
+      <use
+        xlink:href="#gentle-wave"
+        x="48"
+        y="5"
+        fill="rgba(255,255,255,0.3)"
+      />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+  </svg>
+
+  <!-- Footer Content -->
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <a href="./meet-our-team.html"><h3>BIO<span>BANAO</span></h3> </a>
+      
+      <p class="footer-links">
+        <a href="#">Home</a> | <a href="#">About</a> |
+        <a href="#">Contact</a> |
+        <a href="#">Fa&Q</a>
+      </p>
+      <p class="footer-company-name">
+        Copyright © 2024 <strong>BIO-BANAO</strong> All rights reserved
+      </p>
     </div>
-    <div class="footerBottom">
-        <p>Copyright &copy;2024; Designed by <span class="designer">BIO-BANAO Team</span></p>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Ambala, </span> Haryana</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91 7988734559</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p>
+          <a href="mailto:thisissinghamanpreet@gmail.com"></a>
+            <strong style="color: black;"> biobanao@gmail.com</strong></a
+          >
+        </p>
+      </div>
     </div>
-</footer>
+
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About the company</span>
+        <strong>Bio-Banao</strong> is a Resume Maker website where you can
+        expect every type of resume template in which you can fill your information and get your resume in minutes.
+      </p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
 <script>document.querySelectorAll('.faq-question').forEach(item => {
   item.addEventListener('click', () => {
       const parent = item.parentElement;

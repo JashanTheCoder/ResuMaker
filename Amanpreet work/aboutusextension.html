@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="extensionaboutus.css">
+    <link rel="stylesheet" type="text/css" href="/Jashan Work/jashan-aboutus.css">
     <link rel="stylesheet" type="text/css" href="C:\Users\DELL\Desktop\ResuMaker\Jashan Work\jashan-aboutus.css" >
     <link
     href="http://fonts.googleapis.com/css?family=Cookie"
@@ -24,7 +25,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.mi
 <body style="margin: 0; padding: 0;">
     <nav>
         <div class="logo">
-         
+          
             <a href="file:///C:/Users/DELL/Desktop/ResuMaker/Jashan%20Work/main-page-biobanao.html"
                 ><span class="logo-span">
                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
@@ -115,7 +116,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.mi
             </div>
         </div>
         <div class="outcome" >
-            <h3 style="text-align: left;"">Outcome</h3>
+            <h3 style="text-align: left;"
+            >Outcome</h3>
             <div class="underline"></div>
             <p>
                 Bio-Banao is a cutting-edge online resume builder launched in 2024 by Amanpreet, Lovepreet, and Jashan at Chitkara University. Designed to simplify the resume creation process, Bio-Banao combines sleek design with intuitive functionality, helping users craft professional, eye-catching resumes and cover letters effortlessly. It’s your go-to tool for standing out in today’s competitive job market.</p>
@@ -124,8 +126,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.mi
     
   </section>
 
-
-  <div class="team-section">
+<!-- /////////////////////////////////////////////////////////////////////////////team member with modal ///////////////////////////////// -->
+  
+<div class="team-section">
     <div class="curved-bottom">
         <div class="team-header">
             <h2>The Team</h2>
@@ -140,45 +143,89 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.mi
             <div class="yellow-line"></div>
         </div>
     </div>
-    <br /><br />
 
-    <div class="team-member">
+    <div class="team-member" onclick="openModal('Jashan Singh', 'CCO & Co-founder', 'Many people wonder why this Transylvanian is awake at night... All we know is that by dawn, he disappeared, leaving behind only an empty coffee mug and mysterious new updates.', 'file:///C:/Users/DELL/Desktop/ResuMaker/Jashan%20Work/images/avatar.svg')">
         <img src="file:///C:/Users/DELL/Desktop/ResuMaker/Jashan%20Work/images/avatar.svg" alt="Stefan Polexe" />
         <div class="member-info">
             <h3>Jashan Singh</h3>
             <h4>CCO & Co-founder</h4>
             <p>
-                Many people wonder why this Transylvanian is awake at night... All
-                we know is that by dawn, he disappeared, leaving behind only an
-                empty coffee mug and mysterious new updates.
+                Many people wonder why this Transylvanian is awake at night...
             </p>
         </div>
     </div>
-    <div class="team-member">
+    
+    <div class="team-member" onclick="openModal('Amanpreet Singh', 'CTO & Co-founder', 'An avid marketer, researcher, and bookworm at heart. He loves reading biographies of great people and running as a form of meditation.', 'file:///C:/Users/DELL/Desktop/ResuMaker/Jashan%20Work/images/avatar.svg')">
         <img src="file:///C:/Users/DELL/Desktop/ResuMaker/Jashan%20Work/images/avatar.svg" alt="Andrei Kurtuy" />
         <div class="member-info">
             <h3>Amanpreet Singh</h3>
             <h4>CTO & Co-founder</h4>
             <p>
-                An avid marketer, researcher, and bookworm at heart. He loves
-                reading biographies of great people and running as a form of
-                meditation.
+                An avid marketer, researcher, and bookworm at heart.
             </p>
         </div>
     </div>
-    <div class="team-member">
+    
+    <div class="team-member" onclick="openModal('Lovepreet Singh', 'CMO & Co-founder', 'An avid marketer, researcher, and bookworm at heart. He loves reading biographies of great people and running as a form of meditation.', 'file:///C:/Users/DELL/Desktop/ResuMaker/Jashan%20Work/images/avatar.svg')">
         <img src="file:///C:/Users/DELL/Desktop/ResuMaker/Jashan%20Work/images/avatar.svg" alt="Andrei Kurtuy" />
         <div class="member-info">
             <h3>Lovepreet Singh</h3>
             <h4>CMO & Co-founder</h4>
             <p>
-                An avid marketer, researcher, and bookworm at heart. He loves
-                reading biographies of great people and running as a form of
-                meditation.
+                An avid marketer, researcher, and bookworm at heart.
             </p>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Team Member" />
+        <div>
+            <h2 id="modalName" class="modal-text"></h2>
+            <h4 id="modalPosition" class="modal-text"></h4>
+            <p id="modalDescription" class="modal-text"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal(name, position, description, image) {
+    document.getElementById('modalName').innerText = name;
+    document.getElementById('modalPosition').innerText = position;
+    document.getElementById('modalDescription').innerText = description;
+    document.getElementById('modalImage').src = image;
+
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block"; // Show the modal
+}
+
+function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none"; // Hide the modal
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById("myModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 
