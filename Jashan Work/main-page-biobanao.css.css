@@ -114,8 +114,7 @@ main {
 	color: #505255;
 	margin-bottom: 22px;
 }
-
-/* .content button {
+.content button {
 	background-color: #007bff;
 	border-radius: 40px;
 	color: white;
@@ -128,8 +127,8 @@ main {
 
 .content button:hover {
 	background-color: #0056b3;
-} */
-
+}
+/* j ************************************************************************************** */
 .site-button {
 	background-color: #007bff;
 	color: white;
@@ -184,20 +183,70 @@ main {
 }
 
 /* ********************************************************************************************** */
-.resume-image {
+/* .resume-image {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	max-width: 350px;
 	margin: 0 20px;
 	/* animation: slideIn 3s ease-out forwards; */
-}
+/* } */
 
-.resume-image img {
+/* .resume-image img {
 	max-width: 100%;
 	margin: 10px 0;
 	object-fit: contain;
+} */
+.resume-image {
+	position: relative;
+	width: 350px; /* Ensure the parent container has a fixed width */
+	height: 500px; /* Set a fixed height for the container */
+	margin-top: 20px;
+	overflow: hidden; /* Prevent images from overflowing the container */
+	border: 1px solid #ddd; /* Optional: Adds a visible boundary to check alignment */
 }
+.resume {
+	position: absolute;
+	width: 300px; /* Set a fixed width */
+	height: auto; /* Keep aspect ratio */
+	transition: transform 0.5s ease-out;
+}
+
+/* First resume image */
+.resume-1 {
+	/* top: 70px; Starting position */
+	left: -3px; /* Starting position */
+	/* right: 10px; */
+	bottom: 0px;
+	z-index: 2; /* On top */
+}
+
+/* Second resume image */
+.resume-2 {
+	top: 0px; /* Adjust for overlap */
+	left: 60px; /* Adjust for overlap */
+	z-index: 1; /* Below the first image */
+}
+
+/* Animation for floating effect */
+.resume-image img {
+	animation: floatAnimation 5s ease-in-out infinite;
+}
+
+/* @keyframes floatAnimation {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+} */
+
+.resume:hover {
+	transform: scale(1.1); /* Add hover effect to zoom */
+}
+
 /* *********************************************vela work ********************************************* */
 /* Ensure the video section has a height of 60vh */
 .video-section {

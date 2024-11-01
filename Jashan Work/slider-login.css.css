@@ -398,3 +398,11 @@ form.sign-in-form {
 		left: 50%;
 	}
 }
+.error {
+	border: 2px solid red;
+}
+
+.error + .error-message {
+	color: red;
+	font-size: 0.9rem;
+}
