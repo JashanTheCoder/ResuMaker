@@ -1,0 +1,168 @@
+/* Header.module.css */
+
+/* General container and styling */
+.container {
+	padding: 60px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgb(238, 252, 255);
+	min-height: 85vh;
+	gap: 40px;
+	flex-wrap: wrap;
+}
+
+.headingPrimary {
+	font-size: 3.5rem;
+	line-height: 4rem;
+	font-weight: bold;
+	color: #000;
+	max-width: 550px;
+	margin: 0;
+}
+
+.headingPrimary span {
+	background-clip: text;
+	background-image: linear-gradient(to right, #239ce2, #1369b9);
+	color: transparent;
+}
+
+.subheading {
+	font-size: 1.2rem;
+	color: #333;
+	max-width: 450px;
+	margin-top: 10px;
+	line-height: 1.5;
+}
+
+.instructions {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.step {
+	display: flex;
+	align-items: center;
+}
+
+.stepNumber {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-color: #239ce2;
+	color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+.step p {
+	margin: 0;
+	font-size: 1rem;
+	color: #444;
+}
+
+.right img {
+	width: 100%;
+	max-width: 450px;
+	transform: translateY(5px);
+	transition: transform 0.3s ease;
+}
+
+.right img:hover {
+	transform: translateY(-5px);
+}
+
+/* Media Queries */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+	.headingPrimary {
+		font-size: 2.8rem;
+		line-height: 3.5rem;
+	}
+
+	.subheading {
+		font-size: 1.1rem;
+		max-width: 400px;
+	}
+
+	.instructions {
+		gap: 10px;
+	}
+
+	.step p {
+		font-size: 0.95rem;
+	}
+
+	.right img {
+		max-width: 350px;
+	}
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		padding: 40px 20px;
+		text-align: center;
+	}
+
+	.headingPrimary {
+		font-size: 2.4rem;
+		line-height: 3rem;
+	}
+
+	.subheading {
+		font-size: 1rem;
+		margin-top: 8px;
+	}
+
+	.instructions {
+		margin-top: 15px;
+	}
+
+	.stepNumber {
+		width: 28px;
+		height: 28px;
+		font-size: 0.9rem;
+		margin-right: 10px;
+	}
+
+	.step p {
+		font-size: 0.9rem;
+	}
+
+	.right img {
+		max-width: 300px;
+	}
+}
+
+/* Extra small screens (very small phones) */
+@media (max-width: 480px) {
+	.headingPrimary {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+
+	.subheading {
+		font-size: 0.95rem;
+	}
+
+	.stepNumber {
+		width: 24px;
+		height: 24px;
+		font-size: 0.85rem;
+	}
+
+	.step p {
+		font-size: 0.85rem;
+	}
+
+	.right img {
+		max-width: 250px;
+	}
+}

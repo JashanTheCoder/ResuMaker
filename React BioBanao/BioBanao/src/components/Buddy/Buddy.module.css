@@ -1,0 +1,170 @@
+/* Buddy.module.css */
+
+/* General container and styling */
+.container {
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+	padding-top: 0;
+	/* border: 8px solid #b9b9b9; */
+}
+
+.heading {
+	margin-top: 20px;
+	font-weight: 700;
+	font-size: 2.1rem;
+}
+
+.toolbar {
+	width: 100%;
+	display: flex;
+	gap: 40px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.colors {
+	display: flex;
+	gap: 20px;
+	padding: 0 30px;
+}
+
+.colors .color {
+	height: 36px;
+	width: 36px;
+	border-radius: 50%;
+	background-color: #239ce2;
+}
+
+.colors .active {
+	border: 2px solid #000;
+}
+
+.toolbar button {
+	padding: 8px 16px;
+	border-radius: 5px;
+	background-color: #239ce2;
+	color: #fff;
+	outline: none;
+	border: none;
+	font-weight: 500;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	cursor: pointer;
+}
+
+.toolbar button svg {
+	height: 20px;
+	width: 20px;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	width: 100%;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+	.heading {
+		font-size: 1.8rem;
+	}
+
+	.toolbar {
+		gap: 20px;
+	}
+
+	.toolbar button {
+		padding: 6px 14px;
+		font-size: 0.9rem;
+	}
+
+	.colors .color {
+		height: 32px;
+		width: 32px;
+	}
+
+	.main {
+		gap: 20px;
+	}
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+	.container {
+		padding: 20px;
+	}
+
+	.heading {
+		font-size: 1.6rem;
+		margin-top: 10px;
+	}
+
+	.toolbar {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+	}
+
+	.colors {
+		padding: 0;
+		gap: 15px;
+	}
+
+	.toolbar button {
+		padding: 6px 12px;
+		font-size: 0.9rem;
+	}
+
+	.main {
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+		align-items: flex-start;
+	}
+}
+
+/* Extra small screens (very small phones) */
+@media (max-width: 480px) {
+	.container {
+		padding: 15px;
+	}
+
+	.heading {
+		font-size: 1.4rem;
+	}
+
+	.toolbar {
+		gap: 15px;
+	}
+
+	.toolbar button {
+		padding: 5px 10px;
+		font-size: 0.85rem;
+	}
+
+	.colors .color {
+		height: 28px;
+		width: 28px;
+	}
+
+	.main {
+		gap: 15px;
+	}
+}
+
+/* Print styling */
+@media print {
+	@page {
+		margin: 0; /* Removes default browser margins */
+	}
+	body {
+		margin: 1cm; /* Adjust as needed for slight padding */
+	}
+}
